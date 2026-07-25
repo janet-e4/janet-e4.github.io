@@ -1,0 +1,720 @@
+<!doctype html>
+<!-- CreatAIv Christina microsite redesign v2.0 — 2026-07-25 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Core Cell for Well-Seasoned Business Owners | CREATAIV</title>
+  <meta name="description" content="If you can hold a conversation, you can run Core Cell. Meet Janet and Fritz, keep your work on your machine, and own the way you use AI.">
+  <link rel="canonical" href="https://retired.smb.creataiv.com/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Core Cell for Well-Seasoned Business Owners | CREATAIV">
+  <meta property="og:description" content="Two people to work with, a white-glove 90 days, and a system that lives on your machine, in your name.">
+  <meta property="og:url" content="https://retired.smb.creataiv.com/">
+  <meta property="og:image" content="https://retired.smb.creataiv.com/assets/og-preview.webp">
+  <meta property="og:image:alt" content="CreatAIv Core Cell for well-seasoned business owners with a confident owner in conversation.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Core Cell for Well-Seasoned Business Owners | CREATAIV">
+  <meta name="twitter:description" content="If you can hold a conversation, you can run this.">
+  <meta name="twitter:image" content="https://retired.smb.creataiv.com/assets/og-preview.webp">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    @font-face {
+      font-family: "Orbitron";
+      src: url("assets/fonts/Orbitron-Variable.ttf") format("truetype");
+      font-weight: 400 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Medium.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --space: #010204;
+      --space-soft: #050a0d;
+      --panel: #071216;
+      --panel-raised: #0a191e;
+      --teal: #008687;
+      --cyan: #00a8a9;
+      --gold: #d6a54d;
+      --white: #ffffff;
+      --light: #f4f8f7;
+      --charcoal: #0a0f1a;
+      --muted: #a8c1c2;
+      --muted-dark: #52666b;
+      --line: rgba(0, 168, 169, 0.26);
+      --line-gold: rgba(214, 165, 77, 0.42);
+      --max: 1180px;
+      --shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--space); }
+    body {
+      margin: 0;
+      color: var(--white);
+      background:
+        linear-gradient(rgba(0, 168, 169, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 168, 169, 0.035) 1px, transparent 1px),
+        var(--space);
+      background-size: 80px 80px;
+      font-family: "Rajdhani", "Arial Narrow", Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.58;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    ::selection { color: var(--space); background: var(--gold); }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.75rem 1rem;
+      color: var(--space);
+      background: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
+      transform: translateY(-180%);
+      transition: transform 160ms ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .shell { width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto; }
+    .section { position: relative; padding: 7.5rem 0; }
+    .section--light { color: var(--charcoal); background: var(--light); }
+    .section--dark { background: var(--space-soft); }
+    .section--panel { background: var(--panel); }
+
+    .site-header {
+      position: sticky;
+      z-index: 40;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(1, 2, 4, 0.94);
+      backdrop-filter: blur(18px);
+    }
+    .site-header::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      width: min(38vw, 460px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    .nav-shell {
+      width: min(var(--max), calc(100% - 2.5rem));
+      min-height: 84px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand-desktop { width: 150px; height: auto; }
+    .brand-mobile { display: none; align-items: center; gap: 0.7rem; }
+    .brand-mobile img { width: 44px; height: 44px; object-fit: cover; }
+    .brand-mobile span { font-family: "Orbitron", sans-serif; font-size: 0.88rem; letter-spacing: 0.12em; }
+    .nav-links { display: flex; align-items: center; gap: 1.75rem; }
+    .nav-links a {
+      color: #c5d5d6;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links .nav-action {
+      min-height: 44px;
+      padding: 0.64rem 1.1rem;
+      border: 1px solid var(--gold);
+      color: var(--white);
+      background: rgba(214, 165, 77, 0.08);
+    }
+    .nav-links .nav-action:hover { color: var(--space); background: var(--gold); }
+
+    main { overflow: hidden; }
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: "// "; color: var(--cyan); }
+    h1, h2, h3 {
+      margin-top: 0;
+      font-family: "Orbitron", sans-serif;
+      font-weight: 600;
+      line-height: 1.12;
+    }
+    h1 { letter-spacing: -0.025em; }
+    h2 { margin-bottom: 1.25rem; font-size: clamp(2.25rem, 4.8vw, 4.35rem); letter-spacing: -0.02em; }
+    h3 { margin-bottom: 0.8rem; font-size: clamp(1.2rem, 2vw, 1.55rem); }
+    p { margin-top: 0; }
+    .lede { max-width: 760px; color: var(--muted); font-size: clamp(1.13rem, 1.8vw, 1.32rem); line-height: 1.6; }
+    .section--light .lede { color: var(--muted-dark); }
+
+    .button {
+      display: inline-flex;
+      min-height: 56px;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1.3rem;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      color: var(--white);
+      background: linear-gradient(110deg, #006f70, var(--teal));
+      box-shadow: 0 0 0 1px rgba(0, 168, 169, 0.12), 0 15px 38px rgba(0, 134, 135, 0.24);
+      font-family: "Rajdhani", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.035em;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+    .button:hover { transform: translateY(-2px); background: var(--cyan); box-shadow: 0 18px 45px rgba(0, 168, 169, 0.3); }
+    .button::after { content: "↗"; color: #ffe2a6; font-size: 1.05rem; }
+
+    .hero {
+      position: relative;
+      padding: 5.2rem 0 6.5rem;
+      background:
+        radial-gradient(circle at 87% 20%, rgba(0, 168, 169, 0.18), transparent 32%),
+        radial-gradient(circle at 10% 85%, rgba(214, 165, 77, 0.09), transparent 24%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      right: -6rem;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(0, 168, 169, 0.11);
+      transform: rotate(30deg);
+      pointer-events: none;
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(370px, 0.88fr); gap: 4rem; align-items: center; }
+    .hero-copy { position: relative; z-index: 2; padding-left: 2rem; border-left: 3px solid var(--teal); }
+    .hero-copy::before { content: ""; position: absolute; left: -3px; top: 0; width: 3px; height: 24%; background: var(--gold); }
+    .hero h1 { max-width: 760px; margin-bottom: 1.6rem; font-size: clamp(3rem, 5.7vw, 5.65rem); }
+    .hero h1 span { display: block; color: var(--gold); }
+    .hero-subhead { max-width: 710px; margin-bottom: 2rem; color: #c4d7d8; font-size: clamp(1.08rem, 1.5vw, 1.26rem); }
+    .hero-note { margin: 1.3rem 0 0; color: #809b9d; font-size: 0.92rem; letter-spacing: 0.03em; }
+    .hero-visual { position: relative; min-height: 620px; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      inset: 16px;
+      border-top: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+      clip-path: polygon(72% 0, 100% 0, 100% 32%, 98% 32%, 98% 2%, 72% 2%);
+      pointer-events: none;
+    }
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(1, 2, 4, 0.03) 42%, rgba(1, 2, 4, 0.92) 100%), linear-gradient(90deg, rgba(0, 134, 135, 0.34), transparent 46%);
+      pointer-events: none;
+    }
+    .hero-photo { width: 100%; height: 620px; object-fit: cover; object-position: 60% center; filter: saturate(0.82) contrast(1.03); }
+    .owner-signal {
+      position: absolute;
+      z-index: 3;
+      right: 1.8rem;
+      bottom: 1.8rem;
+      left: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line-gold);
+      color: #d6e5e5;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .owner-signal span:last-child { color: var(--gold); }
+
+    .reassurance { position: relative; padding: 6.5rem 0; border-block: 1px solid var(--line); background: var(--panel); }
+    .reassurance::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.22;
+      background:
+        radial-gradient(circle at 12% 40%, rgba(0, 168, 169, 0.38), transparent 25%),
+        linear-gradient(120deg, transparent 62%, rgba(214, 165, 77, 0.1));
+    }
+    .reassurance .shell { position: relative; display: grid; grid-template-columns: 0.45fr 1.55fr; gap: 4rem; align-items: start; }
+    .reassurance-label { color: var(--gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+    .reassurance-label::before { content: "01 / "; color: var(--cyan); }
+    .reassurance blockquote { margin: 0; color: var(--white); font-size: clamp(2.15rem, 4.3vw, 4.35rem); font-weight: 600; line-height: 1.08; }
+    .reassurance blockquote em { color: var(--cyan); font-style: normal; }
+
+    .people-grid { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+    .person-card { position: relative; overflow: hidden; border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+    .person-card::before { content: ""; position: absolute; z-index: 2; top: 0; left: 0; width: 35%; height: 3px; background: var(--gold); }
+    .person-card img { width: 100%; height: 410px; object-fit: cover; object-position: center 25%; filter: saturate(0.76); }
+    .person-copy { position: relative; padding: 2.4rem; }
+    .person-copy::before { content: ""; position: absolute; top: 0; right: 2.4rem; left: 2.4rem; height: 1px; background: linear-gradient(90deg, var(--teal), transparent); }
+    .person-role { margin-bottom: 0.75rem; color: var(--gold); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+    .person-copy p { color: var(--muted); }
+    .person-aside { margin-top: 1.35rem; padding-top: 1.2rem; border-top: 1px solid var(--line); color: var(--white) !important; font-weight: 700; }
+
+    .steps { position: relative; margin-top: 3.8rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); counter-reset: steps; }
+    .step { position: relative; min-height: 310px; padding: 2.4rem; background: var(--space); counter-increment: steps; }
+    .step::before { content: "0" counter(steps); display: block; margin-bottom: 3.8rem; color: var(--gold); font-family: "Orbitron", sans-serif; font-size: 1rem; letter-spacing: 0.16em; }
+    .step::after { content: ""; position: absolute; top: 0; left: 0; width: 42%; height: 3px; background: var(--teal); }
+    .step:nth-child(2)::after { background: var(--cyan); }
+    .step:nth-child(3)::after { background: var(--gold); }
+    .step h3 { color: var(--white); }
+    .step p { color: var(--muted); }
+    .timeline-note { max-width: 780px; margin-top: 2.2rem; color: var(--muted); }
+
+    .pricing-layout { margin-top: 3.6rem; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr); gap: 0; border: 1px solid rgba(10, 15, 26, 0.14); box-shadow: 0 24px 70px rgba(10, 15, 26, 0.13); }
+    .price-main, .price-support { padding: clamp(2.5rem, 5vw, 4.5rem); }
+    .price-main { background: var(--white); }
+    .price-support { color: var(--white); background: var(--charcoal); }
+    .price-kicker { color: var(--teal); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    .price-number { margin: 0.7rem 0 1rem; font-family: "Orbitron", sans-serif; font-size: clamp(3.2rem, 6.5vw, 6.1rem); font-weight: 600; line-height: 1; letter-spacing: -0.04em; }
+    .price-number small { display: inline-block; font-family: "Rajdhani", sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: 0; }
+    .price-summary { max-width: 650px; color: var(--muted-dark); font-size: 1.08rem; }
+    .payment-row { margin-top: 2.2rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(10, 15, 26, 0.14); }
+    .payment-cell { padding: 1.3rem; background: #edf5f3; }
+    .payment-cell strong { display: block; margin-bottom: 0.3rem; color: var(--charcoal); font-family: "Orbitron", sans-serif; font-size: 1.1rem; }
+    .payment-cell span { color: var(--muted-dark); font-size: 0.93rem; }
+    .price-support .price-kicker { color: var(--gold); }
+    .support-price { margin: 0.9rem 0 1.1rem; font-family: "Orbitron", sans-serif; font-size: clamp(2.7rem, 4.8vw, 4.5rem); line-height: 1; }
+    .support-price small { font-family: "Rajdhani", sans-serif; font-size: 1rem; }
+    .price-support p { color: #bed0d1; }
+    .price-support a { color: #66dddc; font-weight: 700; }
+    .hive { margin-top: 2.1rem; padding-top: 1.7rem; border-top: 1px solid rgba(214, 165, 77, 0.36); }
+    .hive strong { color: var(--white); }
+
+    .ownership-grid { display: grid; grid-template-columns: 0.88fr 1.12fr; gap: 5rem; align-items: start; }
+    .ownership-statement { position: sticky; top: 126px; }
+    .truth-list { display: grid; }
+    .truth-item { position: relative; padding: 1.8rem 1rem 1.8rem 5rem; border-top: 1px solid var(--line); }
+    .truth-item:last-child { border-bottom: 1px solid var(--line); }
+    .truth-item::before { content: "0" counter(truth); position: absolute; left: 0; top: 2rem; color: var(--gold); font-family: "Orbitron", sans-serif; font-size: 0.82rem; letter-spacing: 0.12em; }
+    .truth-list { counter-reset: truth; }
+    .truth-item { counter-increment: truth; }
+    .truth-item h3 { margin-bottom: 0.42rem; color: var(--white); font-family: "Rajdhani", sans-serif; font-size: 1.3rem; font-weight: 700; }
+    .truth-item p { margin: 0; color: var(--muted); }
+
+    .questions { display: grid; gap: 0.7rem; margin-top: 3rem; }
+    details { border: 1px solid var(--line); background: rgba(7, 18, 22, 0.8); }
+    summary { position: relative; padding: 1.4rem 4.2rem 1.4rem 1.5rem; color: var(--white); font-weight: 700; cursor: pointer; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 1.5rem; top: 50%; color: var(--gold); font-family: "Orbitron", sans-serif; font-size: 1.25rem; transform: translateY(-50%); }
+    details[open] { border-color: var(--line-gold); }
+    details[open] summary::after { content: "−"; }
+    details p { max-width: 860px; margin: 0; padding: 0 1.5rem 1.6rem; color: var(--muted); }
+
+    .contact-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; overflow: hidden; border: 1px solid var(--line-gold); background: var(--panel); box-shadow: var(--shadow); }
+    .contact-copy { position: relative; padding: clamp(2.7rem, 5vw, 5.2rem); background: var(--charcoal); }
+    .contact-copy::after { content: ""; position: absolute; right: 0; bottom: 0; width: 180px; height: 180px; border-right: 2px solid var(--teal); border-bottom: 2px solid var(--teal); opacity: 0.5; }
+    .contact-copy h2 { font-size: clamp(2.35rem, 4.7vw, 4.2rem); }
+    .contact-copy p { color: var(--muted); }
+    .low-pressure { margin-top: 2.3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: 0.95rem; }
+    .contact-form { padding: clamp(2.7rem, 5vw, 5.2rem); color: var(--charcoal); background: var(--white); }
+    .field { margin-bottom: 1.3rem; }
+    label { display: block; margin-bottom: 0.46rem; color: var(--charcoal); font-weight: 700; }
+    input, textarea {
+      width: 100%;
+      border: 1px solid rgba(10, 15, 26, 0.26);
+      border-radius: 0;
+      padding: 0.95rem 1rem;
+      color: var(--charcoal);
+      background: #f7fbfa;
+    }
+    input:focus, textarea:focus { border-color: var(--teal); outline: 3px solid rgba(0, 134, 135, 0.13); }
+    textarea { min-height: 136px; resize: vertical; }
+    .form-note { margin: 1rem 0 0; color: var(--muted-dark); font-size: 0.84rem; }
+
+    .site-footer { padding: 4.5rem 0; border-top: 1px solid var(--line); color: var(--muted); background: var(--space); }
+    .footer-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 4rem; align-items: end; }
+    .footer-brand { display: flex; align-items: center; gap: 1.25rem; }
+    .footer-brand img { width: 158px; height: auto; }
+    .footer-product { padding-left: 1.25rem; border-left: 1px solid var(--line-gold); }
+    .footer-product strong { display: block; color: var(--white); font-family: "Orbitron", sans-serif; font-size: 0.88rem; letter-spacing: 0.11em; }
+    .footer-product span { display: block; margin-top: 0.35rem; color: var(--muted); font-size: 0.9rem; }
+    .footer-note { text-align: right; font-size: 0.86rem; }
+    .footer-note p { margin-bottom: 0.45rem; }
+
+    html.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 620ms ease, transform 620ms ease; }
+    html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1020px) {
+      .nav-links a:not(.nav-action) { display: none; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-copy { max-width: 820px; }
+      .hero-visual { min-height: 520px; }
+      .hero-photo { height: 520px; object-position: center 24%; }
+      .reassurance .shell, .ownership-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .reassurance .shell { gap: 1.8rem; }
+      .people-grid { grid-template-columns: 1fr; }
+      .person-card { display: grid; grid-template-columns: 0.8fr 1.2fr; }
+      .person-card img { height: 100%; min-height: 430px; }
+      .pricing-layout { grid-template-columns: 1fr; }
+      .ownership-statement { position: static; }
+    }
+
+    @media (max-width: 720px) {
+      body { font-size: 16px; background-size: 54px 54px; }
+      .shell { width: min(100% - 1.5rem, var(--max)); }
+      .section { padding: 5.4rem 0; }
+      .nav-shell { width: min(100% - 1.5rem, var(--max)); min-height: 70px; }
+      .brand-desktop { display: none; }
+      .brand-mobile { display: inline-flex; }
+      .nav-links .nav-action { padding: 0.58rem 0.8rem; font-size: 0.75rem; }
+      .hero { padding: 1.4rem 0 4.6rem; }
+      .hero-grid { display: flex; flex-direction: column; gap: 0; }
+      .hero-visual { order: -1; width: 100%; min-height: 355px; border-bottom: 0; }
+      .hero-photo { height: 355px; object-position: center; }
+      .hero-copy { margin-top: 0; padding: 2.2rem 1.25rem 2.4rem; border: 1px solid var(--line); border-top: 0; border-left-width: 3px; background: rgba(5, 10, 13, 0.96); }
+      .hero-copy::before { height: 36%; }
+      .hero h1 { font-size: clamp(2.5rem, 11.5vw, 3.7rem); }
+      .hero h1 span { margin-top: 0.3rem; }
+      .owner-signal { right: 1.2rem; bottom: 1.2rem; left: 1.2rem; font-size: 0.73rem; }
+      .button { width: 100%; }
+      .reassurance blockquote { font-size: clamp(2rem, 9.2vw, 3.15rem); }
+      .person-card { display: block; }
+      .person-card img { height: auto; min-height: 0; aspect-ratio: 4 / 3; object-position: center 23%; }
+      .person-copy { padding: 2rem 1.35rem; }
+      .steps { grid-template-columns: 1fr; gap: 1px; }
+      .step { min-height: 0; padding: 2rem 1.35rem; }
+      .step::before { margin-bottom: 2rem; }
+      .pricing-layout { margin-top: 2.6rem; }
+      .price-main, .price-support, .contact-copy, .contact-form { padding: 2.2rem 1.35rem; }
+      .payment-row { grid-template-columns: 1fr; }
+      .price-number { font-size: clamp(2.8rem, 14vw, 4.3rem); }
+      .truth-item { padding-left: 4rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-brand { align-items: flex-start; }
+      .footer-brand img { width: 118px; }
+      .footer-note { text-align: left; }
+    }
+
+    @media (max-width: 410px) {
+      .brand-mobile span { display: none; }
+      .hero-visual, .hero-photo { min-height: 310px; height: 310px; }
+      .owner-signal { display: block; }
+      .owner-signal span { display: block; }
+      .owner-signal span + span { margin-top: 0.3rem; }
+      .footer-brand { display: grid; }
+      .footer-product { padding: 1rem 0 0; border-top: 1px solid var(--line-gold); border-left: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the main content</a>
+
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="CREATAIV Core Cell home">
+        <img class="brand-desktop" src="assets/creataiv-horizontal.webp" width="2048" height="1143" alt="CreatAIv">
+        <span class="brand-mobile">
+          <img src="assets/creataiv-icon.webp" width="640" height="640" alt="CreatAIv icon">
+          <span>Core Cell</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#people">Janet &amp; Fritz</a>
+        <a href="#ninety-days">The 90 days</a>
+        <a href="#cost">What it costs</a>
+        <a class="nav-action" href="#contact">Talk to Nick</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">For the well-seasoned business owner</p>
+          <h1 id="hero-title">You ran a business for thirty years. <span>You can run this in a conversation.</span></h1>
+          <p class="hero-subhead">Core Cell gives you two people to work with: Janet, who you talk to and hand things to, and Fritz, who helps when you are stuck. You talk like a person. They learn your world and do the work with you. It all lives on your machine, in your name.</p>
+          <a class="button" href="#contact">I'd like to talk to Nick about this.</a>
+          <p class="hero-note">No tech test. No software scavenger hunt. Just a real conversation.</p>
+        </div>
+        <div class="hero-visual reveal">
+          <picture>
+            <source media="(max-width: 760px)" srcset="assets/hero-owner-mobile.webp" width="1080" height="982">
+            <img class="hero-photo" src="assets/hero-owner.webp" width="1920" height="1080" fetchpriority="high" alt="A confident, well-seasoned business owner having a relaxed conversation at her desk">
+          </picture>
+          <div class="owner-signal"><span>Owner-controlled</span><span>Your machine · your name</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reassurance" aria-label="The simple promise">
+      <div class="shell reveal">
+        <p class="reassurance-label">The whole idea</p>
+        <blockquote>You do not need to be a “computer person.” If you can hold a conversation, <em>you can run this.</em> You talk; Janet works.</blockquote>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="people" aria-labelledby="people-title">
+      <div class="shell">
+        <p class="eyebrow reveal">Two people, not a pile of features</p>
+        <h2 id="people-title" class="reveal">Meet Janet and Fritz.</h2>
+        <p class="lede reveal">You should not have to learn a maze of buttons before useful work begins. Core Cell starts with two clear relationships.</p>
+        <div class="people-grid">
+          <article class="person-card reveal">
+            <img src="assets/janet.webp" width="960" height="1200" loading="lazy" alt="Janet, the calm and attentive person you talk to in Core Cell">
+            <div class="person-copy">
+              <p class="person-role">The one you talk to</p>
+              <h3>Janet</h3>
+              <p>You tell Janet about your world, hand her things to do, and work through them in ordinary language. Over time, she learns how you like things handled.</p>
+              <p class="person-aside">You talk. Janet works.</p>
+            </div>
+          </article>
+          <article class="person-card reveal">
+            <img src="assets/fritz.webp" width="960" height="1200" loading="lazy" alt="Fritz, the reassuring person who helps when you are stuck">
+            <div class="person-copy">
+              <p class="person-role">Help when you are stuck</p>
+              <h3>Fritz</h3>
+              <p>When something feels confusing or stops moving, Fritz helps sort it out. Ideally, you rarely need him—because if you are asking Fritz, Janet is not doing her job.</p>
+              <p class="person-aside">Clear help. No ticket-number runaround.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--panel" id="ninety-days" aria-labelledby="days-title">
+      <div class="shell">
+        <p class="eyebrow reveal">White-glove from the first conversation</p>
+        <h2 id="days-title" class="reveal">Ninety days to make it yours.</h2>
+        <p class="lede reveal">Every week is anchored to something you already do. We are not dropping a box on your desk and wishing you luck.</p>
+        <div class="steps">
+          <article class="step reveal">
+            <h3>Move In</h3>
+            <p>Janet gets to know you, your work, your routines, and what “done right” means in your world.</p>
+          </article>
+          <article class="step reveal">
+            <h3>Hand It Over</h3>
+            <p>You begin passing real work to Janet. We shape the system around the way you actually operate—not the other way around.</p>
+          </article>
+          <article class="step reveal">
+            <h3>Run It</h3>
+            <p>By the end, this is simply how you work: a conversation, a clear handoff, and help when you need it.</p>
+          </article>
+        </div>
+        <p class="timeline-note reveal">You are not expected to become technical. You are expected to be yourself, describe what matters, and make decisions—the parts you already know how to do.</p>
+      </div>
+    </section>
+
+    <section class="section section--light" id="cost" aria-labelledby="cost-title">
+      <div class="shell">
+        <p class="eyebrow reveal">Plain numbers, plainly stated</p>
+        <h2 id="cost-title" class="reveal">What it costs.</h2>
+        <p class="lede reveal">You deserve to know the investment before the conversation begins.</p>
+        <div class="pricing-layout">
+          <div class="price-main reveal">
+            <p class="price-kicker">Core Cell + the 90-day program</p>
+            <p class="price-number">$7,500 <small>+ hardware</small></p>
+            <p class="price-summary">Hardware runs about <strong>$500–$5,000</strong>, depending on the machine. It is billed separately and is outside the $7,500.</p>
+            <div class="payment-row" aria-label="Payment schedule">
+              <div class="payment-cell">
+                <strong>$3,750</strong>
+                <span>Half at signing</span>
+              </div>
+              <div class="payment-cell">
+                <strong>$3,750</strong>
+                <span>Half on day one of your 90-day program</span>
+              </div>
+            </div>
+          </div>
+          <aside class="price-support reveal" aria-label="Support and optional Hive Mind pricing">
+            <p class="price-kicker">Beginning on day 91</p>
+            <p class="support-price">$650 <small>/ month</small></p>
+            <p>Required level-one support begins after the 90 days and is billed quarterly at <strong>$1,950 per quarter</strong>. Support includes a seat in the owner community at <a href="https://buzz.creataiv.com/">buzz.creataiv.com</a>—owners helping owners, with CREATAIV agents in the room.</p>
+            <div class="hive">
+              <p><strong>Optional Hive Mind add-on</strong></p>
+              <p><strong>$49/month</strong> for a single person or <strong>$175/month</strong> for a business, including that business's own Buzz install. Hive Mind is a separate add-on product and is not bundled into the $7,500 Core Cell purchase.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="ownership" aria-labelledby="ownership-title">
+      <div class="shell ownership-grid">
+        <div class="ownership-statement reveal">
+          <p class="eyebrow">Ownership &amp; safety</p>
+          <h2 id="ownership-title">Your work should still be yours tomorrow.</h2>
+          <p class="lede">Core Cell is built around ownership and a clean exit—not another dependency you have to keep renting forever.</p>
+        </div>
+        <div class="truth-list">
+          <article class="truth-item reveal">
+            <h3>It lives on your machine, in your name.</h3>
+            <p>Your Core Cell and working files stay with the equipment you own and control.</p>
+          </article>
+          <article class="truth-item reveal">
+            <h3>You choose the intelligence.</h3>
+            <p>Pick the AI that fits you and swap it when you want. You are not locked to one model company.</p>
+          </article>
+          <article class="truth-item reveal">
+            <h3>You choose the backup.</h3>
+            <p>Use your own drive or cloud destination. CREATAIV can configure it, but the destination and the copy remain yours.</p>
+          </article>
+          <article class="truth-item reveal">
+            <h3>You can leave with everything.</h3>
+            <p>Your Core Cell license is yours per version. If CREATAIV disappeared, your machine and your data would not disappear with us.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--panel" id="questions" aria-labelledby="questions-title">
+      <div class="shell">
+        <p class="eyebrow reveal">Ask the questions that matter</p>
+        <h2 id="questions-title" class="reveal">The hard questions are welcome.</h2>
+        <p class="lede reveal">You have run real things. You know the value of asking what happens when plans change.</p>
+        <div class="questions">
+          <details class="reveal">
+            <summary>Who can actually see my stuff?</summary>
+            <p>Your working data lives on your machine, in your name. We are building toward stronger owner-only access at the technical level; encryption at rest is a direction, not a shipped promise today.</p>
+          </details>
+          <details class="reveal">
+            <summary>What happens if CREATAIV goes out of business?</summary>
+            <p>Your Core Cell lives on your machine, in your name. We disappear; your machine and your data do not.</p>
+          </details>
+          <details class="reveal">
+            <summary>Am I renting this like everything else?</summary>
+            <p>No. You buy Core Cell and own the license per version. You can leave with your machine, your working files, and the backup you control.</p>
+          </details>
+          <details class="reveal">
+            <summary>What if someone steals my computer or comes after my data?</summary>
+            <p>That risk deserves a serious answer. CREATAIV is planning additional safeguards, including a kill-switch direction for future versions. It is not a live feature today, and we will not pretend otherwise.</p>
+          </details>
+          <details class="reveal">
+            <summary>Do I have to be technical?</summary>
+            <p>No. If you can hold a conversation, you can run this. You talk; Janet works. Fritz is there when something needs sorting out.</p>
+          </details>
+          <details class="reveal">
+            <summary>Which AI company am I stuck with?</summary>
+            <p>None. You pick the intelligence and can swap it whenever you want. That independence is part of the point.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <div class="contact-wrap reveal">
+          <div class="contact-copy">
+            <p class="eyebrow">One useful conversation</p>
+            <h2 id="contact-title">Tell Nick what you would like help with.</h2>
+            <p>You do not need a technical plan. A sentence or two about the work you want off your plate is enough to begin.</p>
+            <p class="low-pressure">Nick follows up personally. No automated gatekeeper, no sales maze, and no one else working the lead.</p>
+          </div>
+          <form class="contact-form" action="mailto:nick@e4lv.com?subject=Core%20Cell%20conversation%20for%20a%20well-seasoned%20owner" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="reply">Email or phone</label>
+              <input id="reply" name="Email or phone" type="text" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="help">One line about what you would want help with</label>
+              <textarea id="help" name="What I would like help with" required></textarea>
+            </div>
+            <button class="button" type="submit">I'd like to talk to Nick about this.</button>
+            <p class="form-note">Submitting opens your email program with this note addressed to Nick. Nothing is stored on this website.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="assets/creataiv-horizontal.webp" width="2048" height="1143" loading="lazy" alt="CreatAIv">
+        <div class="footer-product">
+          <strong>Core Cell</strong>
+          <span>Turning big ideas into sweet results.</span>
+        </div>
+      </div>
+      <div class="footer-note">
+        <p>Privacy in plain language: this site uses no analytics, tracking pixels, cookies, chat widgets, or third-party form tools.</p>
+        <p>© 2026 CREATAIV. Core Cell is built for ownership.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach((item) => item.classList.add('is-visible'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      items.forEach((item) => observer.observe(item));
+    })();
+  </script>
+</body>
+</html>
