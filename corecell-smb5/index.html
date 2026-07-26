@@ -1,0 +1,1218 @@
+<!doctype html>
+<!-- Core Cell SMB ≤5 | Version 1.0.1 | Permanent publication 2026-07-26 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capacity Without Headcount — CREATAIV Core Cell</title>
+  <meta name="description" content="Back up every role and multiply your best people — without hiring. Keep your existing tools, teach Core Cell your business, and own the result.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://janet-e4.github.io/corecell-smb5/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Capacity Without Headcount — CREATAIV Core Cell">
+  <meta property="og:description" content="Back up every role and multiply your best people — without adding another payroll line.">
+  <meta property="og:url" content="https://janet-e4.github.io/corecell-smb5/">
+  <meta property="og:image" content="https://janet-e4.github.io/corecell-smb5/assets/og-preview.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A hands-on small-business owner coordinating work with a compact team">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Capacity Without Headcount — CREATAIV Core Cell">
+  <meta name="twitter:description" content="Coverage and multiplication for a small team — without another hire.">
+  <meta name="twitter:image" content="https://janet-e4.github.io/corecell-smb5/assets/og-preview.webp">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    @font-face {
+      font-family: "Orbitron";
+      src: url("assets/fonts/Orbitron-Variable.ttf") format("truetype");
+      font-weight: 400 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Medium.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --ink: #0b1220;
+      --ink-soft: #1a2634;
+      --teal: #09a6a2;
+      --teal-deep: #087c7a;
+      --gold: #d7a64b;
+      --rust: #b95432;
+      --cream: #f4f2ea;
+      --paper: #fbfaf6;
+      --mist: #dfe8e5;
+      --line: rgba(11, 18, 32, .16);
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(10, 20, 28, .14);
+      --display: "Orbitron", Arial, sans-serif;
+      --body: "Rajdhani", Arial, sans-serif;
+      --shell: min(1180px, calc(100% - 40px));
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--body);
+      font-size: 19px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    button { cursor: pointer; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    ::selection { color: var(--white); background: var(--teal-deep); }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      padding: 10px 15px;
+      color: var(--ink);
+      background: var(--gold);
+      transform: translateY(-160%);
+      transition: transform .2s ease;
+      font-weight: 700;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 50;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      background: rgba(7, 13, 20, .88);
+      backdrop-filter: blur(18px);
+      transition: background .25s ease, box-shadow .25s ease;
+    }
+    .site-header.is-scrolled {
+      background: rgba(7, 13, 20, .97);
+      box-shadow: 0 16px 42px rgba(0,0,0,.18);
+    }
+    .nav-shell {
+      width: var(--shell);
+      min-height: 78px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand img { width: 150px; height: auto; }
+    .brand-mark {
+      width: 150px;
+      aspect-ratio: 430 / 112;
+      display: block;
+      background: url("assets/creataiv-horizontal.webp") center / contain no-repeat;
+    }
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links a {
+      color: rgba(255,255,255,.78);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .72rem;
+      font-weight: 700;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links .nav-cta {
+      padding: 11px 17px;
+      border: 1px solid var(--gold);
+      color: var(--white);
+    }
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255,255,255,.3);
+      background: transparent;
+      color: var(--white);
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-toggle span,
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      display: block;
+      width: 21px;
+      height: 2px;
+      background: currentColor;
+      content: "";
+      position: relative;
+    }
+    .menu-toggle span::before { position: absolute; top: -7px; }
+    .menu-toggle span::after { position: absolute; top: 7px; }
+
+    main { overflow: clip; }
+    .hero {
+      min-height: 820px;
+      padding-top: 78px;
+      position: relative;
+      color: var(--white);
+      background: #0b1218;
+      display: grid;
+      isolation: isolate;
+    }
+    .hero-media {
+      position: absolute;
+      inset: 78px 0 0;
+      z-index: -3;
+    }
+    .hero-media picture,
+    .hero-media img { width: 100%; height: 100%; }
+    .hero-media img { object-fit: cover; object-position: 43% center; }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 78px 0 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(5,10,15,.06) 0%, rgba(5,10,15,.14) 35%, rgba(5,10,15,.88) 68%, rgba(5,10,15,.97) 100%),
+        linear-gradient(0deg, rgba(5,10,15,.75) 0%, transparent 35%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 7px;
+      z-index: -1;
+      background: linear-gradient(90deg, var(--rust) 0 33%, var(--gold) 33% 67%, var(--teal) 67% 100%);
+    }
+    .hero-shell {
+      width: var(--shell);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(490px, .82fr);
+      align-items: center;
+      min-height: 742px;
+    }
+    .hero-copy {
+      grid-column: 2;
+      padding: 72px 0 70px 42px;
+      align-self: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--teal);
+      font-family: var(--display);
+      font-size: .72rem;
+      line-height: 1.3;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: currentColor;
+    }
+    .hero .eyebrow { color: #64d6d2; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { text-wrap: balance; }
+    h1 {
+      margin: 20px 0 24px;
+      font-family: var(--display);
+      font-size: clamp(2.75rem, 5.3vw, 5.55rem);
+      line-height: .97;
+      letter-spacing: -.045em;
+      font-weight: 650;
+    }
+    .hero-subhead {
+      max-width: 620px;
+      margin-bottom: 30px;
+      color: rgba(255,255,255,.82);
+      font-size: clamp(1.12rem, 1.7vw, 1.42rem);
+      line-height: 1.45;
+    }
+    .hero-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .button {
+      min-height: 52px;
+      padding: 13px 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid var(--teal);
+      color: var(--white);
+      background: var(--teal-deep);
+      text-decoration: none;
+      font-family: var(--display);
+      font-size: .72rem;
+      line-height: 1.25;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: #0b908d; }
+    .button--light { color: var(--ink); background: var(--gold); border-color: var(--gold); }
+    .button--light:hover { background: #e2b65e; }
+    .hero-note {
+      color: rgba(255,255,255,.62);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+    .hero-proof {
+      position: absolute;
+      left: max(20px, calc((100% - 1180px) / 2));
+      bottom: 38px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .hero-proof span {
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.26);
+      color: rgba(255,255,255,.82);
+      background: rgba(5,10,15,.52);
+      font-size: .76rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      backdrop-filter: blur(12px);
+    }
+
+    .section { padding: 112px 0; }
+    .shell { width: var(--shell); margin: 0 auto; }
+    .section-kicker {
+      margin-bottom: 17px;
+      color: var(--teal-deep);
+      font-family: var(--display);
+      font-size: .72rem;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      font-weight: 750;
+    }
+    .section h2 {
+      margin-bottom: 24px;
+      font-family: var(--display);
+      font-size: clamp(2.25rem, 4.5vw, 4.7rem);
+      line-height: 1.04;
+      letter-spacing: -.04em;
+      font-weight: 640;
+    }
+    .lede {
+      max-width: 760px;
+      color: #485563;
+      font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+      line-height: 1.55;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      gap: 76px;
+      align-items: center;
+    }
+
+    .pain { background: var(--cream); }
+    .coverage-board {
+      min-height: 520px;
+      padding: 30px;
+      color: var(--white);
+      background: var(--ink);
+      border: 1px solid rgba(255,255,255,.09);
+      box-shadow: var(--shadow);
+      clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px));
+    }
+    .board-label {
+      margin-bottom: 26px;
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: .7rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .board-row {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 17px 0;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .board-row:last-of-type { border-bottom: 1px solid rgba(255,255,255,.12); }
+    .board-row strong {
+      color: rgba(255,255,255,.66);
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .shift-track {
+      height: 36px;
+      padding: 5px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.035);
+    }
+    .shift-fill {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      color: var(--ink);
+      background: var(--gold);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .shift-fill--teal { width: 68%; background: #53cbc7; }
+    .shift-fill--rust { width: 82%; color: var(--white); background: var(--rust); }
+    .shift-fill--owner { width: 100%; color: var(--white); background: linear-gradient(90deg, var(--rust), var(--teal-deep)); }
+    .board-callout {
+      margin-top: 24px;
+      padding: 18px;
+      border-left: 3px solid var(--gold);
+      color: rgba(255,255,255,.74);
+      background: rgba(255,255,255,.04);
+    }
+    .board-callout b { color: var(--white); }
+    .pain-copy .pull-quote {
+      margin: 28px 0 0;
+      padding-left: 24px;
+      border-left: 3px solid var(--rust);
+      color: var(--ink-soft);
+      font-size: 1.35rem;
+      font-weight: 650;
+    }
+
+    .idea { color: var(--white); background: var(--ink-soft); position: relative; }
+    .idea::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .18;
+      background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(90deg, transparent, #000 35%, #000);
+    }
+    .idea .shell { position: relative; }
+    .idea .section-kicker { color: #5dd3cf; }
+    .idea .lede { color: rgba(255,255,255,.72); }
+    .multiplier-grid {
+      margin-top: 54px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+    .multiplier-card {
+      min-height: 245px;
+      padding: 32px;
+      border-right: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+    }
+    .multiplier-card:last-child { border-right: 0; }
+    .multiplier-card .number {
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: .76rem;
+      letter-spacing: .12em;
+    }
+    .multiplier-card h3 {
+      margin: 54px 0 13px;
+      font-family: var(--display);
+      font-size: 1.2rem;
+      line-height: 1.25;
+      letter-spacing: -.02em;
+    }
+    .multiplier-card p { margin: 0; color: rgba(255,255,255,.68); }
+    .idea-note {
+      margin-top: 32px;
+      max-width: 850px;
+      color: rgba(255,255,255,.7);
+    }
+
+    .tools { background: var(--paper); }
+    .stack-map {
+      position: relative;
+      min-height: 540px;
+      display: grid;
+      place-items: center;
+      padding: 40px;
+      background: #ecf0eb;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .stack-map::before,
+    .stack-map::after {
+      content: "";
+      position: absolute;
+      background: rgba(8,124,122,.32);
+    }
+    .stack-map::before { width: 2px; height: 72%; left: 50%; top: 14%; }
+    .stack-map::after { height: 2px; width: 72%; top: 50%; left: 14%; }
+    .stack-center {
+      position: relative;
+      z-index: 2;
+      width: 190px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--white);
+      background: var(--ink);
+      border: 4px solid var(--teal);
+      clip-path: polygon(50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+      font-family: var(--display);
+      font-size: 1rem;
+      line-height: 1.3;
+      letter-spacing: .04em;
+    }
+    .tool-node {
+      position: absolute;
+      z-index: 3;
+      width: 150px;
+      min-height: 76px;
+      padding: 18px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid rgba(11,18,32,.2);
+      font-weight: 700;
+    }
+    .tool-node--one { top: 34px; left: 50%; transform: translateX(-50%); }
+    .tool-node--two { left: 30px; top: 50%; transform: translateY(-50%); }
+    .tool-node--three { right: 30px; top: 50%; transform: translateY(-50%); }
+    .tool-node--four { bottom: 34px; left: 50%; transform: translateX(-50%); }
+    .tools-copy ul { margin: 28px 0 0; padding: 0; list-style: none; }
+    .tools-copy li {
+      position: relative;
+      padding: 13px 0 13px 34px;
+      border-top: 1px solid var(--line);
+      font-weight: 650;
+    }
+    .tools-copy li:last-child { border-bottom: 1px solid var(--line); }
+    .tools-copy li::before {
+      content: "✓";
+      position: absolute;
+      left: 2px;
+      color: var(--teal-deep);
+      font-weight: 800;
+    }
+
+    .how { background: var(--mist); }
+    .steps {
+      margin-top: 52px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      counter-reset: step;
+    }
+    .step {
+      min-height: 260px;
+      padding: 30px;
+      position: relative;
+      background: var(--paper);
+      border: 1px solid rgba(11,18,32,.15);
+      counter-increment: step;
+    }
+    .step::before {
+      content: "0" counter(step);
+      display: block;
+      margin-bottom: 58px;
+      color: var(--rust);
+      font-family: var(--display);
+      font-size: .78rem;
+      letter-spacing: .12em;
+      font-weight: 700;
+    }
+    .step h3 {
+      margin-bottom: 12px;
+      font-family: var(--display);
+      font-size: 1.25rem;
+      line-height: 1.25;
+    }
+    .step p { margin: 0; color: #4d5965; }
+    .people-panel {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      color: var(--white);
+      background: var(--ink);
+      box-shadow: var(--shadow);
+    }
+    .person {
+      padding: 34px;
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+    .person:last-child { border-right: 0; }
+    .person-name {
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: 1.4rem;
+    }
+    .person p { margin: 10px 0 0; color: rgba(255,255,255,.72); }
+    .ownership-rail {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(11,18,32,.22);
+      border: 1px solid rgba(11,18,32,.22);
+    }
+    .ownership-rail div { padding: 20px; background: var(--paper); }
+    .ownership-rail strong { display: block; color: var(--teal-deep); }
+
+    .pricing { color: var(--white); background: #09121a; }
+    .pricing .section-kicker { color: #5dd3cf; }
+    .pricing .lede { color: rgba(255,255,255,.7); }
+    .price-layout {
+      margin-top: 52px;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .price-primary {
+      padding: 38px;
+      background: linear-gradient(145deg, rgba(9,166,162,.24), rgba(255,255,255,.04));
+      border: 1px solid rgba(93,211,207,.42);
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    }
+    .price-label {
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .price-value {
+      margin: 18px 0 4px;
+      font-family: var(--display);
+      font-size: clamp(2.6rem, 5vw, 4.75rem);
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+    .price-plus { color: rgba(255,255,255,.6); font-size: 1.25rem; }
+    .price-primary p { color: rgba(255,255,255,.72); }
+    .price-primary hr { border: 0; border-top: 1px solid rgba(255,255,255,.15); margin: 28px 0; }
+    .price-detail {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .price-card {
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+    }
+    .price-card h3 {
+      margin-bottom: 10px;
+      font-family: var(--display);
+      font-size: 1.05rem;
+    }
+    .price-card p { margin-bottom: 0; color: rgba(255,255,255,.68); }
+    .program {
+      margin-top: 24px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.14);
+    }
+    .program-title {
+      color: var(--gold);
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .program-steps {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .program-steps div {
+      padding: 15px;
+      color: var(--ink);
+      background: var(--gold);
+      text-align: center;
+      font-weight: 750;
+    }
+    .price-fine {
+      margin: 24px 0 0;
+      color: rgba(255,255,255,.57);
+      font-size: .93rem;
+    }
+
+    .questions { background: var(--paper); }
+    .questions-layout {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 74px;
+      align-items: start;
+    }
+    .questions-intro { position: sticky; top: 112px; }
+    .questions-list { border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary {
+      padding: 24px 52px 24px 0;
+      position: relative;
+      list-style: none;
+      cursor: pointer;
+      font-family: var(--display);
+      font-size: 1rem;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 8px;
+      top: 19px;
+      color: var(--teal-deep);
+      font-family: var(--body);
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    details[open] summary::after { content: "−"; }
+    details p { max-width: 740px; padding: 0 48px 24px 0; color: #4b5864; }
+
+    .contact {
+      position: relative;
+      padding: 112px 0;
+      color: var(--white);
+      background: var(--rust);
+    }
+    .contact::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .16;
+      background: radial-gradient(circle at 80% 20%, var(--gold), transparent 38%);
+    }
+    .contact .shell { position: relative; }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .contact h2 {
+      margin-bottom: 20px;
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 4.7vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -.04em;
+    }
+    .contact-copy p { color: rgba(255,255,255,.82); font-size: 1.22rem; }
+    .contact-copy .nick-note {
+      margin-top: 28px;
+      padding-left: 18px;
+      border-left: 3px solid var(--gold);
+      color: var(--white);
+      font-weight: 700;
+    }
+    .lead-form {
+      padding: 34px;
+      color: var(--ink);
+      background: var(--paper);
+      box-shadow: 0 26px 70px rgba(69,24,12,.24);
+    }
+    .field-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .field { margin-bottom: 18px; }
+    label { display: block; margin-bottom: 7px; font-weight: 700; }
+    input, textarea {
+      width: 100%;
+      border: 1px solid rgba(11,18,32,.28);
+      border-radius: 0;
+      color: var(--ink);
+      background: var(--white);
+    }
+    input { min-height: 50px; padding: 10px 12px; }
+    textarea { min-height: 125px; padding: 12px; resize: vertical; }
+    input:focus, textarea:focus { border-color: var(--teal-deep); outline: 3px solid rgba(9,166,162,.18); }
+    .lead-form .button { width: 100%; border: 0; }
+    .form-note { margin: 14px 0 0; color: #66717b; font-size: .88rem; }
+
+    .site-footer { padding: 48px 0; color: rgba(255,255,255,.68); background: #070d13; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: end;
+    }
+    .footer-brand img { width: 156px; }
+    .tagline {
+      margin: 15px 0 0;
+      color: var(--gold);
+      font-family: var(--display);
+      font-size: .73rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .privacy { max-width: 660px; margin: 20px 0 0; font-size: .9rem; }
+    .footer-meta { text-align: right; font-size: .9rem; }
+    .footer-meta a { color: #64d6d2; }
+
+    .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+
+    @media (max-width: 1040px) {
+      .nav-links { gap: 16px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { min-height: auto; }
+      .hero-shell { min-height: 680px; grid-template-columns: .8fr 1.2fr; }
+      .hero-copy { padding-left: 24px; }
+      .split { gap: 48px; }
+      .price-layout { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 780px) {
+      :root { --shell: min(100% - 28px, 680px); }
+      body { font-size: 18px; }
+      .nav-shell { min-height: 68px; }
+      .brand img, .brand-mark { width: 138px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 18px 14px 22px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #070d13;
+        border-top: 1px solid rgba(255,255,255,.12);
+      }
+      .nav-links.is-open { display: flex; }
+      .nav-links a:not(.nav-cta) { display: block; }
+      .nav-links a { padding: 13px; }
+      .nav-links .nav-cta { margin-top: 8px; text-align: center; }
+
+      .hero { padding-top: 68px; display: block; background: var(--ink); }
+      .hero-media { position: relative; inset: auto; height: 430px; }
+      .hero-media img { object-position: center 36%; }
+      .hero::before { display: none; }
+      .hero-shell { display: block; min-height: 0; width: 100%; }
+      .hero-copy { padding: 48px 20px 92px; }
+      h1 { font-size: clamp(2.55rem, 12vw, 4.2rem); }
+      .hero-proof { left: 20px; right: 20px; bottom: 24px; }
+      .hero-proof span { font-size: .68rem; }
+
+      .section { padding: 82px 0; }
+      .split, .questions-layout, .contact-layout { grid-template-columns: 1fr; gap: 44px; }
+      .coverage-board { min-height: 0; order: 2; }
+      .pain-copy { order: 1; }
+      .multiplier-grid, .steps { grid-template-columns: 1fr; }
+      .multiplier-card { min-height: 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+      .multiplier-card:last-child { border-bottom: 0; }
+      .multiplier-card h3 { margin-top: 28px; }
+      .stack-map { min-height: 480px; }
+      .people-panel, .ownership-rail, .price-detail { grid-template-columns: 1fr; }
+      .person { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+      .person:last-child { border-bottom: 0; }
+      .questions-intro { position: static; }
+      .field-grid { grid-template-columns: 1fr; gap: 0; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-meta { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-media { height: 390px; }
+      .hero-copy { padding-inline: 14px; }
+      .hero-actions { align-items: stretch; }
+      .button { width: 100%; }
+      .hero-proof { display: none; }
+      .coverage-board { padding: 20px; }
+      .board-row { grid-template-columns: 72px 1fr; gap: 10px; }
+      .stack-map { min-height: 500px; padding: 24px; }
+      .stack-center { width: 150px; }
+      .tool-node { width: 112px; min-height: 68px; padding: 10px; font-size: .86rem; }
+      .tool-node--two { left: 12px; }
+      .tool-node--three { right: 12px; }
+      .lead-form { padding: 24px 18px; }
+      .program-steps { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .js .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="CREATAIV Core Cell home">
+        <span class="brand-mark" role="img" aria-label="CREATAIV"></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span></button>
+      <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+        <a href="#coverage">The idea</a>
+        <a href="#tools">Your tools</a>
+        <a href="#cost">What it costs</a>
+        <a href="#questions">Hard questions</a>
+        <a class="nav-cta" href="#contact">Talk to Nick</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <picture>
+          <source media="(max-width: 780px)" srcset="assets/hero-eric-mobile.webp">
+          <img src="assets/hero-eric.webp" alt="Hands-on small-business owner coordinating work with a compact team in a bright workshop" width="1920" height="1440">
+        </picture>
+      </div>
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <span class="eyebrow">For hands-on teams of five or fewer</span>
+          <h1 id="hero-title">Five people. The output of fifteen. No new hires.</h1>
+          <p class="hero-subhead">Your small team is maxed, and the next hire is expensive and slow. Core Cell backs up every role and multiplies your best people—without adding a body—while leaving the tools you already run exactly where they are.</p>
+          <div class="hero-actions">
+            <a class="button button--light" href="#contact">Show me how this covers my team</a>
+            <span class="hero-note">Nick follows up personally.</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-proof" aria-label="Core Cell ownership principles">
+        <span>Your machine</span>
+        <span>Your data</span>
+        <span>Your choice of AI</span>
+      </div>
+    </section>
+
+    <section class="section pain" id="coverage" aria-labelledby="pain-title">
+      <div class="shell split">
+        <div class="coverage-board reveal" aria-label="Small-team coverage board">
+          <div class="board-label">A normal week on a five-person team</div>
+          <div class="board-row">
+            <strong>Sales</strong>
+            <div class="shift-track"><div class="shift-fill shift-fill--teal">Trade show</div></div>
+          </div>
+          <div class="board-row">
+            <strong>Admin</strong>
+            <div class="shift-track"><div class="shift-fill shift-fill--rust">Vacation</div></div>
+          </div>
+          <div class="board-row">
+            <strong>Ops</strong>
+            <div class="shift-track"><div class="shift-fill">Crunch</div></div>
+          </div>
+          <div class="board-row">
+            <strong>Owner</strong>
+            <div class="shift-track"><div class="shift-fill shift-fill--owner">Backfilling all of it</div></div>
+          </div>
+          <div class="board-callout"><b>The bottleneck is not effort.</b> It is coverage. When one person moves, the whole week moves with them.</div>
+        </div>
+        <div class="pain-copy reveal">
+          <div class="section-kicker">01 / The pain</div>
+          <h2 id="pain-title">Everybody is already doing two jobs.</h2>
+          <p class="lede">Somebody is out sick, somebody is on vacation, somebody is at a trade show—and you are backfilling all of it. Everyone is maxed. Hiring is expensive, slow, and risky at your size.</p>
+          <p class="pull-quote">You need capacity, not another payroll line.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section idea" aria-labelledby="idea-title">
+      <div class="shell">
+        <div class="section-kicker">02 / The idea</div>
+        <h2 id="idea-title">Backup every role. Multiply the people you already trust.</h2>
+        <p class="lede">The AI is not another employee to schedule, supervise, and hope works out. It is coverage for the sick day and the crunch—and a multiplier for the best work already happening inside your team.</p>
+        <div class="multiplier-grid reveal">
+          <article class="multiplier-card">
+            <span class="number">01</span>
+            <h3>Keep work moving</h3>
+            <p>Routine questions, handoffs, and repeatable work do not have to stop because one person is unavailable.</p>
+          </article>
+          <article class="multiplier-card">
+            <span class="number">02</span>
+            <h3>Spread the best thinking</h3>
+            <p>Your strongest salesperson, operator, or admin can make what they know easier for the rest of the team to use.</p>
+          </article>
+          <article class="multiplier-card">
+            <span class="number">03</span>
+            <h3>Add capacity, not payroll</h3>
+            <p>Build more coverage around the people you have before taking on another full-time hire.</p>
+          </article>
+        </div>
+        <p class="idea-note">The “five people, output of fifteen” line is the direction: fewer dropped balls, faster handoffs, and more of your best work available across the team. Actual gains depend on the work you teach it and how consistently your team uses it.</p>
+      </div>
+    </section>
+
+    <section class="section tools" id="tools" aria-labelledby="tools-title">
+      <div class="shell split">
+        <div class="tools-copy reveal">
+          <div class="section-kicker">03 / Fits your tools</div>
+          <h2 id="tools-title">Keep the systems that already run the business.</h2>
+          <p class="lede">We do not rip out what works. Your POS stays your POS. Your line-of-business software stays put. Core Cell sits alongside them as the intelligence layer—not a replacement.</p>
+          <ul>
+            <li>No forced software migration</li>
+            <li>No new all-purpose dashboard to run the company from</li>
+            <li>No lock-in to one AI model</li>
+            <li>Your existing source systems remain the source systems</li>
+          </ul>
+        </div>
+        <div class="stack-map reveal" role="img" aria-label="Core Cell sits alongside your point of sale, existing software, files, and chosen AI rather than replacing them">
+          <div class="tool-node tool-node--one">Your POS</div>
+          <div class="tool-node tool-node--two">Your files</div>
+          <div class="stack-center">Core<br>Cell</div>
+          <div class="tool-node tool-node--three">Your software</div>
+          <div class="tool-node tool-node--four">Your choice of AI</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" aria-labelledby="how-title">
+      <div class="shell">
+        <div class="section-kicker">04 / How it works</div>
+        <h2 id="how-title">Talk. Organize. Cover more.</h2>
+        <p class="lede">There is no technical maze to master. You teach Core Cell the way you teach a capable person—by talking through how the business actually works.</p>
+        <div class="steps reveal">
+          <article class="step">
+            <h3>You talk</h3>
+            <p>Explain the work in ordinary language. If you can hold a conversation, you can run this.</p>
+          </article>
+          <article class="step">
+            <h3>It gets organized</h3>
+            <p>Your “sales stuff,” “money stuff,” and “ops stuff” become useful lanes built around the way your team works.</p>
+          </article>
+          <article class="step">
+            <h3>Your team gets coverage</h3>
+            <p>People can find the right context, repeat good work, and keep routine handoffs moving when someone is out.</p>
+          </article>
+        </div>
+        <div class="people-panel reveal" aria-label="The two people you talk to">
+          <article class="person">
+            <div class="person-name">Janet</div>
+            <p>Your front door. Talk to her like a person, hand her the work, and keep moving.</p>
+          </article>
+          <article class="person">
+            <div class="person-name">Fritz</div>
+            <p>Help when you are stuck. If you keep needing Fritz, Janet is not doing her job yet—and we fix that.</p>
+          </article>
+        </div>
+        <div class="ownership-rail reveal" aria-label="What the owner controls">
+          <div><strong>Your machine</strong> Core Cell lives with you.</div>
+          <div><strong>Your intelligence</strong> Pick an AI and swap it later.</div>
+          <div><strong>Your backup</strong> You own the destination; CREATAIV configures it.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="cost" aria-labelledby="cost-title">
+      <div class="shell">
+        <div class="section-kicker">05 / What it costs</div>
+        <h2 id="cost-title">One clear starting point. No hidden bundle.</h2>
+        <p class="lede">The license, hardware, program, required support, and optional growth path are shown separately so you can see the real commitment.</p>
+        <div class="price-layout reveal">
+          <article class="price-primary">
+            <div class="price-label">Core Cell license</div>
+            <div class="price-value">$7,500</div>
+            <div class="price-plus">+ hardware</div>
+            <p>Hardware is typically <b>$500–$5,000</b>, billed separately and outside the $7,500.</p>
+            <hr>
+            <p><b>$3,750—half at signing</b><br><b>$3,750—the remaining half on day one</b> of the 90-day program</p>
+            <div class="program">
+              <div class="program-title">Your 90-day program</div>
+              <div class="program-steps">
+                <div>Move In</div>
+                <div>Hand It Over</div>
+                <div>Run It</div>
+              </div>
+            </div>
+          </article>
+          <div class="price-detail">
+            <article class="price-card">
+              <h3>Required support</h3>
+              <p><b>$650/month</b> beginning on day 91, billed quarterly at <b>$1,950/quarter</b>. This includes a seat in the CREATAIV owner community—owners helping owners, with CREATAIV agents in the room.</p>
+            </article>
+            <article class="price-card">
+              <h3>Hive Mind add-on</h3>
+              <p>A separate growth path: <b>$49/month</b> for the single-person tier or <b>$175/month</b> for the business tier, including your own Buzz install.</p>
+            </article>
+            <article class="price-card">
+              <h3>Per-version license</h3>
+              <p>You own the licensed version you buy. New versions are not silently turned into a forever rental.</p>
+            </article>
+            <article class="price-card">
+              <h3>Choose the intelligence</h3>
+              <p>Bring the AI model that fits. Change it when your needs, terms, or preferences change.</p>
+            </article>
+          </div>
+        </div>
+        <p class="price-fine">Hive Mind is a separate add-on and is not included in the $7,500. Backup storage or cloud services remain in your name and may carry their own provider charges.</p>
+      </div>
+    </section>
+
+    <section class="section questions" id="questions" aria-labelledby="questions-title">
+      <div class="shell questions-layout">
+        <div class="questions-intro reveal">
+          <div class="section-kicker">06 / Hard questions</div>
+          <h2 id="questions-title">Ask the question you are actually thinking.</h2>
+          <p class="lede">Small teams do not have time for a glossy answer that creates three more problems.</p>
+        </div>
+        <div class="questions-list reveal">
+          <details>
+            <summary>Will this disrupt the tools we already run?</summary>
+            <p>No. Your POS and existing software stay where they are. Core Cell sits alongside them. Any connection to another system is reviewed for fit rather than sold as a magical universal integration.</p>
+          </details>
+          <details>
+            <summary>Will my staff actually use it?</summary>
+            <p>They talk to it like a person; there is no new all-purpose dashboard to master. If they can hold a conversation, they can use it. Adoption still depends on teaching it useful work and making it part of the team’s normal rhythm.</p>
+          </details>
+          <details>
+            <summary>Is this cheaper than hiring?</summary>
+            <p>It is designed to add coverage and multiplication without a new payroll line. Whether it is cheaper than a particular hire depends on the role, your workload, and the value of the capacity you build. The full Core Cell cost is shown above so you can compare honestly.</p>
+          </details>
+          <details>
+            <summary>Do I own it, or am I renting?</summary>
+            <p>You own the licensed version: the data stays on your machine, the backup destination stays in your name, and you choose the AI behind it. You can leave with your data and your setup rather than starting over empty-handed.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-layout">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">One conversation. No sales maze.</span>
+          <h2 id="contact-title">Show me how this covers my team.</h2>
+          <p>Tell Nick how many people are carrying the business and what keeps landing back on your desk. He will follow up personally.</p>
+          <p class="nick-note">No automated chat. No booking funnel. Just Nick.</p>
+        </div>
+        <form class="lead-form reveal" id="lead-form" action="mailto:nick@e4lv.com" method="post" enctype="text/plain">
+          <div class="field-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="contact-detail">Email or phone</label>
+              <input id="contact-detail" name="contact" type="text" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="team-size">Team size</label>
+            <input id="team-size" name="team_size" type="text" inputmode="numeric" placeholder="Example: 4 people" required>
+          </div>
+          <div class="field">
+            <label for="pressure">What stretches your team thin?</label>
+            <textarea id="pressure" name="pressure" placeholder="Sick days, follow-up, admin, crunch periods, trade shows…" required></textarea>
+          </div>
+          <button class="button" type="submit">Show me how this covers my team</button>
+          <p class="form-note">Submitting opens your email app with the details addressed only to Nick. Nothing is stored on this page.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="assets/creataiv-horizontal.webp" alt="CREATAIV" width="430" height="112" loading="lazy">
+        <p class="tagline">AI. Simple. Safe.</p>
+        <p class="privacy">This page uses no analytics, tracking pixels, advertising cookies, or remote form service. If you contact Nick, your own email provider handles the message.</p>
+      </div>
+      <div class="footer-meta">
+        <p>Core Cell by CREATAIV / E4<br>Permanent home: janet-e4.github.io/corecell-smb5</p>
+        <p><a href="#top">Back to top</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const header = document.querySelector('.site-header');
+      const menuButton = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav-links');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 18);
+      updateHeader();
+      window.addEventListener('scroll', updateHeader, { passive: true });
+
+      menuButton.addEventListener('click', () => {
+        const open = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!open));
+        menuButton.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+        nav.classList.toggle('is-open', !open);
+      });
+
+      nav.addEventListener('click', (event) => {
+        if (event.target instanceof HTMLAnchorElement) {
+          nav.classList.remove('is-open');
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.setAttribute('aria-label', 'Open navigation');
+        }
+      });
+
+      const revealItems = document.querySelectorAll('.reveal');
+      if (reducedMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+      } else {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: .12 });
+        revealItems.forEach((item) => observer.observe(item));
+      }
+
+      const form = document.getElementById('lead-form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const subject = `Core Cell team coverage — ${data.get('name')}`;
+        const body = [
+          `Name: ${data.get('name')}`,
+          `Email or phone: ${data.get('contact')}`,
+          `Team size: ${data.get('team_size')}`,
+          '',
+          'What stretches the team thin:',
+          `${data.get('pressure')}`
+        ].join('\n');
+        window.location.href = `mailto:nick@e4lv.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    })();
+  </script>
+</body>
+</html>
