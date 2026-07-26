@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Core Cell SMB ≤5 | Version 1.0.1 | Permanent publication 2026-07-26 -->
+<!-- Core Cell SMB ≤5 | Version 1.0.2 | Hero scale, header logo, and Eric-specific pricing correction | 2026-07-26 -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -124,7 +124,7 @@
     }
     .nav-shell {
       width: var(--shell);
-      min-height: 78px;
+      min-height: 96px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -132,12 +132,12 @@
       gap: 30px;
     }
     .brand { display: inline-flex; align-items: center; text-decoration: none; }
-    .brand img { width: 150px; height: auto; }
+    .brand img { width: 230px; height: auto; }
     .brand-mark {
-      width: 150px;
-      aspect-ratio: 430 / 112;
+      width: 230px;
+      aspect-ratio: 830 / 310;
       display: block;
-      background: url("assets/creataiv-horizontal.webp") center / contain no-repeat;
+      background: url("assets/creataiv-horizontal-tight.webp") center / contain no-repeat;
     }
     .nav-links { display: flex; align-items: center; gap: 26px; }
     .nav-links a {
@@ -180,7 +180,7 @@
     main { overflow: clip; }
     .hero {
       min-height: 820px;
-      padding-top: 78px;
+      padding-top: 96px;
       position: relative;
       color: var(--white);
       background: #0b1218;
@@ -189,7 +189,7 @@
     }
     .hero-media {
       position: absolute;
-      inset: 78px 0 0;
+      inset: 96px 0 0;
       z-index: -3;
     }
     .hero-media picture,
@@ -198,7 +198,7 @@
     .hero::before {
       content: "";
       position: absolute;
-      inset: 78px 0 0;
+      inset: 96px 0 0;
       z-index: -2;
       background:
         linear-gradient(90deg, rgba(5,10,15,.06) 0%, rgba(5,10,15,.14) 35%, rgba(5,10,15,.88) 68%, rgba(5,10,15,.97) 100%),
@@ -790,6 +790,7 @@
       .nav-links { gap: 16px; }
       .nav-links a:not(.nav-cta) { display: none; }
       .hero { min-height: auto; }
+      .hero-media img { object-position: 22% center; }
       .hero-shell { min-height: 680px; grid-template-columns: .8fr 1.2fr; }
       .hero-copy { padding-left: 24px; }
       .split { gap: 48px; }
@@ -799,12 +800,12 @@
     @media (max-width: 780px) {
       :root { --shell: min(100% - 28px, 680px); }
       body { font-size: 18px; }
-      .nav-shell { min-height: 68px; }
-      .brand img, .brand-mark { width: 138px; }
+      .nav-shell { min-height: 78px; }
+      .brand img, .brand-mark { width: 190px; }
       .menu-toggle { display: inline-flex; }
       .nav-links {
         position: absolute;
-        top: 68px;
+        top: 78px;
         left: 0;
         right: 0;
         padding: 18px 14px 22px;
@@ -820,7 +821,7 @@
       .nav-links a { padding: 13px; }
       .nav-links .nav-cta { margin-top: 8px; text-align: center; }
 
-      .hero { padding-top: 68px; display: block; background: var(--ink); }
+      .hero { padding-top: 78px; display: block; background: var(--ink); }
       .hero-media { position: relative; inset: auto; height: 430px; }
       .hero-media img { object-position: center 36%; }
       .hero::before { display: none; }
@@ -897,7 +898,7 @@
       <div class="hero-media">
         <picture>
           <source media="(max-width: 780px)" srcset="assets/hero-eric-mobile.webp">
-          <img src="assets/hero-eric.webp" alt="Hands-on small-business owner coordinating work with a compact team in a bright workshop" width="1920" height="1440">
+          <img src="assets/hero-eric.webp" alt="Hands-on small-business owner coordinating work with a compact team in a bright workshop" width="2688" height="1152">
         </picture>
       </div>
       <div class="hero-shell">
@@ -1043,11 +1044,11 @@
         <div class="price-layout reveal">
           <article class="price-primary">
             <div class="price-label">Core Cell license</div>
-            <div class="price-value">$7,500</div>
+            <div class="price-value">$17,500</div>
             <div class="price-plus">+ hardware</div>
-            <p>Hardware is typically <b>$500–$5,000</b>, billed separately and outside the $7,500.</p>
+            <p>Hardware is typically <b>$500–$5,000</b>, billed separately and outside the $17,500.</p>
             <hr>
-            <p><b>$3,750—half at signing</b><br><b>$3,750—the remaining half on day one</b> of the 90-day program</p>
+            <p><b>$8,750—half at signing</b><br><b>$8,750—the remaining half on day one</b> of the 90-day program</p>
             <div class="program">
               <div class="program-title">Your 90-day program</div>
               <div class="program-steps">
@@ -1076,7 +1077,7 @@
             </article>
           </div>
         </div>
-        <p class="price-fine">Hive Mind is a separate add-on and is not included in the $7,500. Backup storage or cloud services remain in your name and may carry their own provider charges.</p>
+        <p class="price-fine">Hive Mind is a separate add-on and is not included in the $17,500. Backup storage or cloud services remain in your name and may carry their own provider charges.</p>
       </div>
     </section>
 

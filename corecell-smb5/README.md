@@ -19,6 +19,7 @@ This repository contains the **static, single-page CREATAIV Core Cell microsite 
 ├── index.html
 ├── assets/
 │   ├── creataiv-horizontal.webp
+│   ├── creataiv-horizontal-tight.webp
 │   ├── creataiv-icon.webp
 │   ├── favicon.png
 │   ├── hero-eric.webp
@@ -33,7 +34,7 @@ This repository contains the **static, single-page CREATAIV Core Cell microsite 
 
 All production images, icons, fonts, and scripts are stored in this repository. Do not replace them with hotlinks or CDN references.
 
-The Eric hero person is an original, site-specific visual. **Do not substitute either person from the Christina/retired-owner site or the Deniz/private-data site, and do not reuse Eric as the hero on a later persona site.** Each Core Cell persona should remain visibly distinct.
+The Eric hero person is an original, site-specific visual. The v1.0.2 desktop and mobile compositions intentionally show Eric at a smaller environmental scale with his complete head and generous headroom while preserving the warm workshop setting. **Do not substitute either person from the Christina/retired-owner site or the Deniz/private-data site, and do not reuse Eric as the hero on a later persona site.** Each Core Cell persona should remain visibly distinct.
 
 ## Preview locally
 
@@ -78,10 +79,10 @@ Before publishing an edit, rerun the Core Cell hard-truth review and confirm tha
 
 This microsite deliberately includes no analytics, tracking pixel, automated chat, SaaS lead form, cookie banner, external font host, or third-party asset CDN. Core Cell copy must not present encryption at rest, a kill switch, blockchain storage, or a downloadable mobile app as shipped functionality.
 
-The approved Eric persona may state pricing, but the complete terms must remain intact: **$7,500 plus separately billed hardware of approximately $500–$5,000; $3,750 at signing and $3,750 on day one of the 90-day program; required $650/month level-one support beginning day 91 and billed quarterly at $1,950; optional Hive Mind at $49/month for the single-person tier or $175/month for the business tier.**
+The approved Eric persona may state pricing. For this site, the owner explicitly corrected the startup price on 2026-07-26 to an Eric-specific **$17,500 plus separately billed hardware of approximately $500–$5,000; $8,750 at signing and $8,750 on day one of the 90-day program; required $650/month level-one support beginning day 91 and billed quarterly at $1,950; optional Hive Mind at $49/month for the single-person tier or $175/month for the business tier.** This documented Eric-specific correction supersedes the older `$7,500` factory-template value for this microsite only.
 
 The line **“Five people. The output of fifteen.”** is positioning, not a guaranteed performance multiple. The page therefore qualifies that actual gains depend on the work taught to Core Cell and consistent team use.
 
 ## Asset provenance
 
-The CREATAIV logos, favicon, and self-hosted font files follow the approved Core Cell brand kit. Font licenses are included beside the font files under `assets/fonts/`. Eric’s desktop and mobile hero images and the Open Graph preview were generated specifically for this microsite and optimized into local WebP files.
+The CREATAIV logos, favicon, and self-hosted font files follow the approved Core Cell brand kit. `creataiv-horizontal-tight.webp` is a tightly cropped derivative of the unchanged approved horizontal wordmark, created so the visible header logo is legible at its true aspect ratio; the original source asset remains in the repository. Font licenses are included beside the font files under `assets/fonts/`. Eric’s desktop and mobile hero images and the Open Graph preview were generated specifically for this microsite and optimized into local WebP files. The desktop and mobile hero images were reframed in v1.0.2 to preserve the approved workshop background while reducing Eric’s apparent scale and keeping his full head visible.
