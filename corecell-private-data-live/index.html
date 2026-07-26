@@ -1,0 +1,736 @@
+<!doctype html>
+<!-- CreatAIv Deniz private-data microsite v1.0 — 2026-07-25 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI for Confidential Work, Done Carefully — CREATAIV Core Cell</title>
+  <meta name="description" content="Keep control of privileged client files on your machine, in your name, and choose the intelligence. See the redaction workflow CREATAIV is building for sensitive work.">
+  <link rel="canonical" href="https://janet-e4.github.io/corecell-private-data-live/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI for Confidential Work, Done Carefully — CREATAIV Core Cell">
+  <meta property="og:description" content="A local-first, owner-controlled Core Cell for work governed by confidentiality—with the roadmap stated plainly.">
+  <meta property="og:url" content="https://janet-e4.github.io/corecell-private-data-live/">
+  <meta property="og:image" content="https://janet-e4.github.io/corecell-private-data-live/assets/og-preview.webp">
+  <meta property="og:image:alt" content="A confidentiality-bound professional reviewing a document beside a locally controlled workstation.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI for Confidential Work, Done Carefully — CREATAIV Core Cell">
+  <meta name="twitter:description" content="Keep control of where the work lives, choose the intelligence, and see exactly what is live versus in development.">
+  <meta name="twitter:image" content="https://janet-e4.github.io/corecell-private-data-live/assets/og-preview.webp">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    @font-face {
+      font-family: "Orbitron";
+      src: url("assets/fonts/Orbitron-Variable.ttf") format("truetype");
+      font-weight: 400 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Medium.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --ink: #010204;
+      --ink-soft: #05090c;
+      --charcoal: #0a0f1a;
+      --panel: #081216;
+      --panel-raised: #0c191d;
+      --paper: #f4f6f4;
+      --paper-deep: #e8eeeb;
+      --teal: #008687;
+      --cyan: #00a8a9;
+      --gold: #d6a54d;
+      --white: #ffffff;
+      --text: #eef5f3;
+      --muted: #abc0bf;
+      --muted-dark: #4c6264;
+      --line: rgba(0, 168, 169, 0.24);
+      --line-gold: rgba(214, 165, 77, 0.42);
+      --max: 1180px;
+      --shadow: 0 28px 74px rgba(0, 0, 0, 0.34);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--ink); }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        linear-gradient(rgba(0, 168, 169, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 168, 169, 0.025) 1px, transparent 1px),
+        var(--ink);
+      background-size: 96px 96px;
+      font-family: "Rajdhani", "Arial Narrow", Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.58;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    ::selection { color: var(--ink); background: var(--gold); }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.75rem 1rem;
+      color: var(--ink);
+      background: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
+      transform: translateY(-180%);
+      transition: transform 160ms ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .shell { width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto; }
+    .section { position: relative; padding: 7.5rem 0; }
+    .section--paper { color: var(--charcoal); background: var(--paper); }
+    .section--dark { background: var(--ink-soft); }
+    .section--panel { background: var(--panel); }
+
+    .site-header {
+      position: sticky;
+      z-index: 40;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(1, 2, 4, 0.96);
+      backdrop-filter: blur(18px);
+    }
+    .site-header::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      width: min(38vw, 460px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    .nav-shell {
+      width: min(var(--max), calc(100% - 2.5rem));
+      min-height: 82px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand-desktop { width: 150px; height: auto; }
+    .brand-mobile { display: none; align-items: center; gap: 0.7rem; }
+    .brand-mobile img { width: 42px; height: 42px; object-fit: cover; }
+    .brand-mobile span { font-family: "Orbitron", sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; }
+    .nav-links { display: flex; align-items: center; gap: 1.55rem; }
+    .nav-links a {
+      color: #c5d5d6;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links .nav-action {
+      min-height: 44px;
+      padding: 0.64rem 1.05rem;
+      border: 1px solid var(--gold);
+      color: var(--white);
+      background: rgba(214, 165, 77, 0.07);
+    }
+    .nav-links .nav-action:hover { color: var(--ink); background: var(--gold); }
+
+    main { overflow: hidden; }
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: "// "; color: var(--cyan); }
+    h1, h2, h3 {
+      margin-top: 0;
+      font-family: "Orbitron", sans-serif;
+      font-weight: 600;
+      line-height: 1.12;
+    }
+    h1 { letter-spacing: -0.025em; }
+    h2 { margin-bottom: 1.25rem; font-size: clamp(2.25rem, 4.8vw, 4.35rem); letter-spacing: -0.025em; }
+    h3 { margin-bottom: 0.8rem; font-size: clamp(1.2rem, 2vw, 1.55rem); }
+    p { margin-top: 0; }
+    .lede { max-width: 760px; color: var(--muted); font-size: clamp(1.13rem, 1.8vw, 1.32rem); line-height: 1.62; }
+    .section--paper .lede { color: var(--muted-dark); }
+
+    .button {
+      display: inline-flex;
+      min-height: 56px;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.9rem 1.3rem;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      color: var(--white);
+      background: linear-gradient(110deg, #006f70, var(--teal));
+      box-shadow: 0 0 0 1px rgba(0, 168, 169, 0.12), 0 15px 38px rgba(0, 134, 135, 0.2);
+      font-family: "Rajdhani", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+    .button:hover { transform: translateY(-2px); background: var(--cyan); box-shadow: 0 18px 45px rgba(0, 168, 169, 0.28); }
+    .button::after { content: "↗"; color: #ffe2a6; font-size: 1.05rem; }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      min-height: clamp(760px, 71vw, 900px);
+      overflow: hidden;
+      align-items: center;
+      padding: clamp(7rem, 10vw, 10rem) 0 clamp(7rem, 9vw, 9rem);
+      background: var(--ink);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 2.5rem;
+      right: max(1.5rem, calc((100vw - var(--max)) / 2));
+      width: 90px;
+      height: 90px;
+      border-top: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+      pointer-events: none;
+    }
+    .hero-backdrop {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      overflow: hidden;
+      background: var(--ink);
+    }
+    .hero-backdrop::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(1, 2, 4, 0.99) 0%, rgba(1, 2, 4, 0.94) 36%, rgba(1, 2, 4, 0.55) 55%, rgba(1, 2, 4, 0.08) 78%, rgba(1, 2, 4, 0.14) 100%),
+        linear-gradient(0deg, rgba(1, 2, 4, 0.98) 0%, rgba(1, 2, 4, 0.02) 44%),
+        linear-gradient(135deg, rgba(0, 134, 135, 0.12), transparent 45%);
+      pointer-events: none;
+    }
+    .hero-backdrop picture, .hero-backdrop img { display: block; width: 100%; height: 100%; }
+    .hero-backdrop img { object-fit: cover; object-position: center; filter: saturate(0.82) contrast(1.04); }
+    .hero-grid { position: relative; z-index: 2; }
+    .hero-copy { position: relative; max-width: min(730px, 59vw); padding-left: 2rem; border-left: 3px solid var(--teal); }
+    .hero-copy::before { content: ""; position: absolute; left: -3px; top: 0; width: 3px; height: 24%; background: var(--gold); }
+    .hero h1 { max-width: 730px; margin-bottom: 1.55rem; font-size: clamp(3rem, 5vw, 5rem); }
+    .hero h1 span { display: block; color: var(--gold); }
+    .hero-subhead { max-width: 670px; margin-bottom: 2rem; color: #d5e2e1; font-size: clamp(1.05rem, 1.4vw, 1.22rem); text-shadow: 0 2px 20px rgba(1, 2, 4, 0.75); }
+    .hero-note { margin: 1.3rem 0 0; color: #a8b8b8; font-size: 0.94rem; }
+    .status-strip {
+      position: absolute;
+      z-index: 3;
+      right: max(1.5rem, calc((100vw - var(--max)) / 2));
+      bottom: 2rem;
+      width: min(41rem, 48vw);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--line-gold);
+      background: linear-gradient(90deg, rgba(1, 2, 4, 0.9), rgba(1, 2, 4, 0.3));
+    }
+    .status-strip span { padding: 1rem; color: #d6e5e5; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .status-strip span + span { border-left: 1px solid var(--line); }
+    .status-strip strong { display: block; margin-top: 0.25rem; color: var(--gold); font-size: 0.76rem; }
+
+    .blocker-grid { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: clamp(3rem, 8vw, 8rem); align-items: start; }
+    .section-index { margin: 0; color: var(--teal); font-family: "Orbitron", sans-serif; font-size: 0.9rem; letter-spacing: 0.14em; }
+    .blocker-copy blockquote { margin: 0; font-size: clamp(2rem, 4vw, 3.9rem); font-weight: 600; line-height: 1.14; }
+    .blocker-copy blockquote em { color: var(--teal); font-style: normal; }
+    .blocker-copy .plain-note { max-width: 760px; margin-top: 2.2rem; color: var(--muted-dark); font-size: 1.14rem; }
+
+    .truth-grid { margin-top: 3.6rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); }
+    .truth-card { position: relative; min-height: 285px; padding: 2.4rem; background: var(--ink); }
+    .truth-card::before { content: ""; position: absolute; top: 0; left: 0; width: 34%; height: 3px; background: var(--teal); }
+    .truth-card:nth-child(2)::before, .truth-card:nth-child(3)::before { background: var(--cyan); }
+    .truth-card:nth-child(4)::before { background: var(--gold); }
+    .truth-label { margin-bottom: 2.7rem; color: var(--gold); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+    .truth-card p:last-child { color: var(--muted); }
+    .people-note { margin-top: 2.5rem; padding: 1.7rem 2rem; border-left: 3px solid var(--gold); background: var(--panel-raised); color: #d9e5e4; }
+    .people-note strong { color: var(--white); }
+
+    .development-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr); gap: 4rem; align-items: end; }
+    .development-flag { padding: 1.25rem; border: 1px solid var(--line-gold); background: rgba(214, 165, 77, 0.08); }
+    .development-flag strong { display: block; margin-bottom: 0.4rem; color: var(--gold); font-family: "Orbitron", sans-serif; font-size: 0.82rem; letter-spacing: 0.11em; }
+    .development-flag span { color: var(--muted); }
+    .direction-flow { position: relative; margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .direction-flow::before { content: ""; position: absolute; top: 2.15rem; right: 13%; left: 13%; height: 1px; background: linear-gradient(90deg, var(--teal), var(--gold)); }
+    .direction-step { position: relative; min-height: 320px; padding: 4.8rem 2rem 2rem; border: 1px solid var(--line); background: var(--panel-raised); box-shadow: var(--shadow); }
+    .direction-number { position: absolute; z-index: 2; top: 1.25rem; left: 2rem; display: grid; width: 46px; height: 46px; place-items: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); background: var(--ink); font-family: "Orbitron", sans-serif; font-size: 0.78rem; }
+    .direction-step p { color: var(--muted); }
+    .direction-step .future-word { color: var(--white); font-weight: 700; }
+    .development-caution { margin-top: 2rem; padding: 1.5rem 1.7rem; border: 1px solid var(--line-gold); color: #e1dcce; background: rgba(1, 2, 4, 0.7); }
+    .development-caution strong { color: var(--gold); }
+
+    .honesty-layout { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(3rem, 7vw, 7rem); align-items: start; }
+    .honesty-intro { position: sticky; top: 124px; }
+    .status-columns { display: grid; gap: 1.2rem; }
+    .status-panel { padding: 2rem; border: 1px solid rgba(10, 15, 26, 0.14); background: var(--white); box-shadow: 0 18px 50px rgba(10, 15, 26, 0.08); }
+    .status-panel.roadmap { background: var(--paper-deep); }
+    .status-panel h3 { display: flex; align-items: center; gap: 0.65rem; }
+    .status-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(0, 134, 135, 0.12); }
+    .roadmap .status-dot { background: var(--gold); box-shadow: 0 0 0 5px rgba(214, 165, 77, 0.14); }
+    .status-panel ul { margin: 1.3rem 0 0; padding: 0; list-style: none; }
+    .status-panel li { position: relative; padding: 0.75rem 0 0.75rem 1.4rem; border-top: 1px solid rgba(10, 15, 26, 0.1); }
+    .status-panel li::before { content: "—"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+    .roadmap li::before { color: var(--gold); }
+    .review-note { margin-top: 1.2rem; padding: 1.5rem 1.7rem; color: var(--white); background: var(--charcoal); }
+    .review-note strong { color: var(--gold); }
+
+    .pricing-layout { margin-top: 3.6rem; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr); border: 1px solid rgba(10, 15, 26, 0.14); box-shadow: 0 24px 70px rgba(10, 15, 26, 0.13); }
+    .price-main, .price-support { padding: clamp(2.5rem, 5vw, 4.5rem); }
+    .price-main { background: var(--white); }
+    .price-support { color: var(--white); background: var(--charcoal); }
+    .price-kicker { color: var(--teal); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    .price-number { margin: 0.7rem 0 1rem; font-family: "Orbitron", sans-serif; font-size: clamp(3.2rem, 6.5vw, 6.1rem); font-weight: 600; line-height: 1; letter-spacing: -0.04em; }
+    .price-number small { display: inline-block; font-family: "Rajdhani", sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: 0; }
+    .price-summary { max-width: 650px; color: var(--muted-dark); font-size: 1.08rem; }
+    .payment-row { margin-top: 2.2rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(10, 15, 26, 0.14); }
+    .payment-cell { padding: 1.3rem; background: #edf3f0; }
+    .payment-cell strong { display: block; margin-bottom: 0.3rem; color: var(--charcoal); font-family: "Orbitron", sans-serif; font-size: 1.1rem; }
+    .support-price { margin: 1.1rem 0 1.4rem; color: var(--gold); font-family: "Orbitron", sans-serif; font-size: clamp(2.7rem, 4.6vw, 4.4rem); line-height: 1; }
+    .support-price small { color: var(--white); font-family: "Rajdhani", sans-serif; font-size: 1rem; }
+    .price-support a { color: var(--cyan); }
+    .hive { margin-top: 2rem; padding-top: 1.6rem; border-top: 1px solid var(--line); color: #c5d4d3; }
+    .program-strip { margin-top: 1px; display: grid; grid-template-columns: repeat(3, 1fr); background: rgba(10, 15, 26, 0.14); }
+    .program-step { padding: 1rem 1.25rem; background: #f0f4f1; }
+    .program-step + .program-step { border-left: 1px solid rgba(10, 15, 26, 0.12); }
+    .program-step strong { display: block; color: var(--teal); font-family: "Orbitron", sans-serif; font-size: 0.8rem; }
+
+    .questions { margin-top: 3.5rem; border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary { position: relative; padding: 1.65rem 3.5rem 1.65rem 0; color: var(--white); font-family: "Orbitron", sans-serif; font-size: clamp(1.05rem, 2vw, 1.35rem); cursor: pointer; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 0.4rem; top: 50%; color: var(--gold); font-family: "Rajdhani", sans-serif; font-size: 2rem; transform: translateY(-50%); }
+    details[open] summary::after { content: "−"; }
+    details p { max-width: 840px; padding: 0 4rem 1.7rem 0; color: var(--muted); }
+
+    .contact-wrap { position: relative; overflow: hidden; display: grid; grid-template-columns: 0.9fr 1.1fr; border: 1px solid var(--line-gold); background: var(--panel); box-shadow: var(--shadow); }
+    .contact-wrap::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(135deg, rgba(0, 134, 135, 0.13), transparent 44%); }
+    .contact-copy, .contact-form { position: relative; padding: clamp(2.4rem, 5vw, 4.7rem); }
+    .contact-copy { border-right: 1px solid var(--line); }
+    .contact-copy h2 { font-size: clamp(2.25rem, 4.5vw, 4rem); }
+    .contact-copy p { color: var(--muted); }
+    .contact-copy .low-pressure { margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--line); color: var(--white); font-weight: 700; }
+    .contact-form { display: grid; gap: 1.2rem; background: rgba(1, 2, 4, 0.5); }
+    .field { display: grid; gap: 0.45rem; }
+    .field label { color: #d5e0df; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.05em; }
+    .field input, .field textarea { width: 100%; border: 1px solid rgba(168, 193, 194, 0.34); border-radius: 0; color: var(--white); background: #071014; }
+    .field input { min-height: 50px; padding: 0.75rem; }
+    .field textarea { min-height: 140px; padding: 0.85rem; resize: vertical; }
+    .field input:focus, .field textarea:focus { border-color: var(--cyan); outline: none; box-shadow: 0 0 0 3px rgba(0, 168, 169, 0.15); }
+    .field-hint { margin: -0.1rem 0 0; color: #8fa5a5; font-size: 0.82rem; }
+    .form-note { margin: 0; color: #8fa5a5; font-size: 0.82rem; }
+
+    .site-footer { padding: 3.2rem 0; border-top: 1px solid var(--line); background: #000; }
+    .footer-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: end; }
+    .footer-brand { display: flex; align-items: center; gap: 1.5rem; }
+    .footer-brand img { width: 150px; height: auto; }
+    .footer-product { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+    .footer-product strong { display: block; font-family: "Orbitron", sans-serif; font-size: 0.9rem; }
+    .footer-product span { color: #809494; font-size: 0.84rem; }
+    .footer-note { color: #819393; font-size: 0.86rem; text-align: right; }
+    .footer-note p { margin-bottom: 0.35rem; }
+    .footer-note a { color: #c1d0cf; }
+
+    .reveal { opacity: 1; transform: none; }
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms ease, transform 700ms ease; }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+
+    @media (max-width: 1020px) {
+      .nav-links a:not(.nav-action) { display: none; }
+      .hero-copy { max-width: min(690px, 68vw); }
+      .status-strip { width: min(39rem, 58vw); }
+      .development-head, .honesty-layout { grid-template-columns: 1fr; }
+      .honesty-intro { position: static; }
+      .pricing-layout { grid-template-columns: 1fr; }
+      .contact-wrap { grid-template-columns: 1fr; }
+      .contact-copy { border-right: 0; border-bottom: 1px solid var(--line); }
+    }
+
+    @media (max-width: 760px) {
+      body { font-size: 17px; background-size: 64px 64px; }
+      .shell { width: min(100% - 1.5rem, var(--max)); }
+      .section { padding: 5.2rem 0; }
+      .nav-shell { width: min(100% - 1.5rem, var(--max)); min-height: 70px; }
+      .brand-desktop { display: none; }
+      .brand-mobile { display: inline-flex; }
+      .nav-links { gap: 0; }
+      .nav-links .nav-action { min-height: 40px; padding: 0.55rem 0.8rem; font-size: 0.72rem; }
+
+      .hero { display: block; min-height: auto; padding: 0 0 5rem; }
+      .hero::after { top: 1.5rem; right: 1rem; width: 62px; height: 62px; }
+      .hero-backdrop { position: relative; z-index: 0; height: min(125vw, 540px); }
+      .hero-backdrop::after { background: linear-gradient(0deg, var(--ink) 0%, rgba(1, 2, 4, 0.05) 38%, rgba(1, 2, 4, 0.12) 100%); }
+      .hero-backdrop img { object-position: center 34%; }
+      .hero-grid { margin-top: -2px; }
+      .hero-copy { max-width: none; padding: 1.7rem 0 0; border-left: 0; }
+      .hero-copy::before { display: none; }
+      .hero h1 { margin-bottom: 1.2rem; font-size: clamp(2.45rem, 12vw, 4rem); line-height: 1.13; }
+      .hero-subhead { font-size: 1.06rem; }
+      .hero .button { width: 100%; }
+      .status-strip { position: static; width: min(100% - 1.5rem, var(--max)); margin: 2.2rem auto 0; grid-template-columns: 1fr; border: 1px solid var(--line); }
+      .status-strip span + span { border-top: 1px solid var(--line); border-left: 0; }
+
+      .blocker-grid, .truth-grid, .direction-flow, .footer-grid { grid-template-columns: 1fr; }
+      .blocker-grid { gap: 1.6rem; }
+      .truth-card { min-height: auto; }
+      .direction-flow::before { display: none; }
+      .development-head { gap: 2rem; }
+      .payment-row, .program-strip { grid-template-columns: 1fr; }
+      .program-step + .program-step { border-top: 1px solid rgba(10, 15, 26, 0.12); border-left: 0; }
+      .price-main, .price-support { padding: 2.2rem 1.4rem; }
+      .contact-copy, .contact-form { padding: 2.3rem 1.35rem; }
+      .footer-grid { gap: 1.8rem; }
+      .footer-brand { align-items: flex-start; }
+      .footer-note { text-align: left; }
+    }
+
+    @media (max-width: 430px) {
+      .brand-mobile span { display: none; }
+      .hero h1 { font-size: 2.38rem; }
+      .button { padding-inline: 1rem; }
+      .truth-card, .direction-step, .status-panel { padding-inline: 1.4rem; }
+      summary { padding-right: 2.6rem; }
+      details p { padding-right: 0.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the main content</a>
+
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="CreatAIv Core Cell home">
+        <img class="brand-desktop" src="assets/creataiv-horizontal.webp" width="2048" height="1143" alt="CreatAIv">
+        <span class="brand-mobile">
+          <img src="assets/creataiv-icon.webp" width="1024" height="1024" loading="lazy" alt="CREATAIV mark">
+          <span>CORE CELL</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#today">What is live</a>
+        <a href="#building">In development</a>
+        <a href="#cost">What it costs</a>
+        <a class="nav-action" href="#contact">Talk to Nick</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-backdrop">
+        <picture>
+          <source media="(max-width: 760px)" srcset="assets/hero-private-data-mobile.webp" width="1080" height="1350">
+          <img src="assets/hero-private-data.webp" width="1920" height="1080" fetchpriority="high" alt="A professional reviewing a client document beside a locally controlled workstation in a private office">
+        </picture>
+      </div>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">For work governed by confidentiality</p>
+          <h1 id="hero-title">Confidential work deserves <span>an AI setup you control.</span></h1>
+          <p class="hero-subhead">Core Cell lives on your machine, in your name. CREATAIV does not take custody of your working files. You choose the intelligence—and what, if anything, a configured workflow sends to it. A redaction workflow for sensitive documents is in active development, not a finished feature.</p>
+          <a class="button" href="#contact">Let's talk about how you'd handle my confidential work.</a>
+          <p class="hero-note">No “trust us” security language. We separate what is available today from what we are still building.</p>
+        </div>
+      </div>
+      <div class="status-strip" aria-label="Core Cell status summary">
+        <span>Available today<strong>Your machine</strong></span>
+        <span>Available today<strong>Your choice of model</strong></span>
+        <span>In development<strong>Redaction workflow</strong></span>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="blocker" aria-labelledby="blocker-title">
+      <div class="shell blocker-grid">
+        <p class="section-index reveal">01 / THE BLOCKER</p>
+        <div class="blocker-copy reveal">
+          <h2 id="blocker-title">You can see the value. You also know the duty.</h2>
+          <blockquote>You cannot assume that a public AI service's terms, retention, training policy, or access controls fit <em>confidential client work.</em></blockquote>
+          <p class="plain-note">A contract, a set of financials, a strategy memo, or protected client detail is not ordinary prompt material. Staying on the sidelines has been a reasonable decision—not resistance to technology.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="today" aria-labelledby="today-title">
+      <div class="shell">
+        <p class="eyebrow reveal">What is true today</p>
+        <h2 id="today-title" class="reveal">Start with control you can point to.</h2>
+        <p class="lede reveal">Core Cell's present-day promise is ownership, not a sweeping confidentiality guarantee. The machine, working files, model choice, and backup destination remain under your control.</p>
+        <div class="truth-grid">
+          <article class="truth-card reveal">
+            <p class="truth-label">The working files</p>
+            <h3>They live on your machine.</h3>
+            <p>Core Cell is installed on equipment you own and control, in your name. CREATAIV does not take custody of your working files.</p>
+          </article>
+          <article class="truth-card reveal">
+            <p class="truth-label">The intelligence</p>
+            <h3>You choose the model.</h3>
+            <p>Bring your own LLM, choose the fit, and swap it later. If you select a hosted model, its terms—and your decision about what to send—still matter.</p>
+          </article>
+          <article class="truth-card reveal">
+            <p class="truth-label">The backup</p>
+            <h3>You choose the destination.</h3>
+            <p>Use your own drive or your own cloud destination. CREATAIV can configure the backup, but the destination and the copy remain yours.</p>
+          </article>
+          <article class="truth-card reveal">
+            <p class="truth-label">The exit</p>
+            <h3>You are not trapped by our survival.</h3>
+            <p>Your license is yours per version. If CREATAIV disappeared, your machine, working files, and owner-controlled backup would not disappear with us.</p>
+          </article>
+        </div>
+        <p class="people-note reveal"><strong>Core Cell still feels human:</strong> Janet is the person you talk to and hand work to. Fritz helps when something gets stuck. Ideally, you rarely need Fritz—because if you are asking Fritz, Janet is not doing her job.</p>
+      </div>
+    </section>
+
+    <section class="section section--panel" id="building" aria-labelledby="building-title">
+      <div class="shell">
+        <div class="development-head">
+          <div>
+            <p class="eyebrow reveal">What CREATAIV is building</p>
+            <h2 id="building-title" class="reveal">A careful redaction direction.</h2>
+            <p class="lede reveal">The intended workflow is designed around a simple principle: a model should receive only the material it needs for the task, not the private details it does not.</p>
+          </div>
+          <p class="development-flag reveal"><strong>IN ACTIVE DEVELOPMENT</strong><span>This is the direction—not a finished feature, security claim, or confidentiality guarantee.</span></p>
+        </div>
+        <div class="direction-flow" aria-label="Planned redaction workflow direction">
+          <article class="direction-step reveal">
+            <span class="direction-number">01</span>
+            <h3>Mask private details</h3>
+            <p>The workflow <span class="future-word">would identify and strip</span> names, account details, and other sensitive elements before model processing.</p>
+          </article>
+          <article class="direction-step reveal">
+            <span class="direction-number">02</span>
+            <h3>Process the masked version</h3>
+            <p>The selected model <span class="future-word">would work from</span> the reduced, masked document rather than the original client file.</p>
+          </article>
+          <article class="direction-step reveal">
+            <span class="direction-number">03</span>
+            <h3>Restore approved details</h3>
+            <p>After processing, the local workflow <span class="future-word">would reinsert</span> the approved private details into the result under owner control.</p>
+          </article>
+        </div>
+        <p class="development-caution reveal"><strong>Plain statement:</strong> you cannot buy this redaction workflow as a completed feature today. CREATAIV is sharing the intended direction early so a confidentiality-bound professional can evaluate the idea without being sold a promise that has not shipped.</p>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="honesty" aria-labelledby="honesty-title">
+      <div class="shell honesty-layout">
+        <div class="honesty-intro reveal">
+          <p class="eyebrow">The honesty commitment</p>
+          <h2 id="honesty-title">The line stays visible.</h2>
+          <p class="lede">You should not need fine print to discover whether a privacy feature exists. We state the line directly and update it only when the product changes.</p>
+        </div>
+        <div class="status-columns">
+          <article class="status-panel reveal">
+            <h3><span class="status-dot" aria-hidden="true"></span>Available today</h3>
+            <ul>
+              <li>Core Cell runs on the computer you own and control.</li>
+              <li>CREATAIV does not take custody of your working files.</li>
+              <li>You choose and can swap the LLM.</li>
+              <li>You choose the backup destination while CREATAIV configures it.</li>
+              <li>Your Core Cell license is yours per version.</li>
+            </ul>
+          </article>
+          <article class="status-panel roadmap reveal">
+            <h3><span class="status-dot" aria-hidden="true"></span>Direction and roadmap</h3>
+            <ul>
+              <li>The mask-process-restore redaction workflow is in active development.</li>
+              <li>Owner-only encryption and related safeguards are design directions, not shipped claims.</li>
+              <li>Other privacy and safety features remain roadmap direction until they are built and reviewed.</li>
+            </ul>
+          </article>
+          <p class="review-note reveal"><strong>Review before rhetoric:</strong> CREATAIV routes public privacy and compliance language through legal review, including with Bay Law, before publishing it. That review governs our claims; it is not a certification or a guarantee of a particular result.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="cost" aria-labelledby="cost-title">
+      <div class="shell">
+        <p class="eyebrow reveal">Plain numbers, every condition</p>
+        <h2 id="cost-title" class="reveal">What it costs.</h2>
+        <p class="lede reveal">Trust also means showing the full investment before the conversation begins.</p>
+        <div class="pricing-layout">
+          <div class="price-main reveal">
+            <p class="price-kicker">Core Cell + the 90-day program</p>
+            <p class="price-number">$7,500 <small>+ hardware</small></p>
+            <p class="price-summary">Hardware is <strong>$500–$5,000</strong>, depending on the machine. It is billed separately and remains outside the $7,500.</p>
+            <div class="payment-row" aria-label="Payment schedule">
+              <div class="payment-cell">
+                <strong>$3,750</strong>
+                <span>Half at signing</span>
+              </div>
+              <div class="payment-cell">
+                <strong>$3,750</strong>
+                <span>Half on day one of the 90-day program</span>
+              </div>
+            </div>
+            <div class="program-strip" aria-label="Ninety-day program stages">
+              <div class="program-step"><strong>01</strong><span>Move In</span></div>
+              <div class="program-step"><strong>02</strong><span>Hand It Over</span></div>
+              <div class="program-step"><strong>03</strong><span>Run It</span></div>
+            </div>
+          </div>
+          <aside class="price-support reveal" aria-label="Required support and optional Hive Mind pricing">
+            <p class="price-kicker">Required beginning on day 91</p>
+            <p class="support-price">$650 <small>/ month</small></p>
+            <p>Level-one support begins after the 90 days and is billed quarterly at <strong>$1,950 per quarter</strong>. Support includes a seat in the owner community at <a href="https://buzz.creataiv.com/">buzz.creataiv.com</a>—owners helping owners, with CREATAIV agents in the room.</p>
+            <div class="hive">
+              <p><strong>Optional Hive Mind add-on</strong></p>
+              <p><strong>$49/month</strong> for the single-person tier or <strong>$175/month</strong> for the business tier, which includes the buyer's own Buzz install. Hive Mind is a separate add-on and is not bundled into the $7,500 Core Cell purchase.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="questions" aria-labelledby="questions-title">
+      <div class="shell">
+        <p class="eyebrow reveal">Ask the questions that matter</p>
+        <h2 id="questions-title" class="reveal">The hard questions are welcome.</h2>
+        <p class="lede reveal">A careful buyer should press on the boundaries. These are the answers we can stand behind today.</p>
+        <div class="questions">
+          <details class="reveal">
+            <summary>Will my clients' data ever leave my hands or train an AI?</summary>
+            <p>Core Cell stores your working files on your machine, and CREATAIV does not take custody of them. You choose the model and decide what, if anything, a configured workflow sends to it. If you choose a hosted model, that provider's terms, retention practices, and your professional duties still govern the material you submit. BYO-LLM gives you choice; it does not erase those terms.</p>
+          </details>
+          <details class="reveal">
+            <summary>Can I actually use AI on privileged documents?</summary>
+            <p>That is the use case the redaction workflow is being built to address, but it is not ready today. The direction is to mask private details, process a reduced working copy, and restore approved details locally afterward. Until a reviewed workflow ships, your professional duties and the selected model's terms still control what is appropriate to submit.</p>
+          </details>
+          <details class="reveal">
+            <summary>Are you promising encryption or a confidentiality guarantee?</summary>
+            <p>No. Owner-only encryption and related safeguards are roadmap directions, not live features claimed on this site. We will not promise a confidentiality guarantee until the product and legal review support that promise.</p>
+          </details>
+          <details class="reveal">
+            <summary>What happens to my files if CREATAIV disappears?</summary>
+            <p>Your Core Cell, working files, per-version license, and owner-controlled backup remain with the machine and destinations you control. Our business disappearing would not take those things with it.</p>
+          </details>
+          <details class="reveal">
+            <summary>Who is accountable for the legal side of these claims?</summary>
+            <p>CREATAIV routes public privacy and compliance claims through legal review—including with Bay Law—before publishing them. That process limits what we say; it does not replace your own professional judgment, client duties, or matter-specific legal analysis.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <div class="contact-wrap reveal">
+          <div class="contact-copy">
+            <p class="eyebrow">One careful conversation</p>
+            <h2 id="contact-title">Tell Nick the kind of confidential work you handle.</h2>
+            <p>Keep the first note general. A practice area, document type, or broad workflow is enough to begin.</p>
+            <p class="low-pressure">Nick follows up personally. No automated chat, no scheduling maze, and no one else working the lead.</p>
+          </div>
+          <form class="contact-form" action="mailto:nick@e4lv.com?subject=Core%20Cell%20for%20confidential%20work" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="reply">Email or phone</label>
+              <input id="reply" name="Email or phone" type="text" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="work">The kind of confidential work you do</label>
+              <textarea id="work" name="Kind of confidential work" aria-describedby="work-hint" required></textarea>
+              <p class="field-hint" id="work-hint">Do not include client names, matter details, account numbers, privileged facts, or other sensitive information.</p>
+            </div>
+            <button class="button" type="submit">Let's talk about how you'd handle my confidential work.</button>
+            <p class="form-note">Submitting opens your email program with this note addressed to Nick. Nothing is stored on this website.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="assets/creataiv-horizontal.webp" width="2048" height="1143" loading="lazy" alt="CreatAIv">
+        <div class="footer-product">
+          <strong>Core Cell</strong>
+          <span>Built around ownership.</span>
+        </div>
+      </div>
+      <div class="footer-note">
+        <p>Privacy in plain language: this site uses no analytics, tracking pixels, cookies, chat widgets, or third-party form tools.</p>
+        <p><a href="#contact">Contact begins in one place</a> · © 2026 CREATAIV</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach((item) => item.classList.add('is-visible'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      items.forEach((item) => observer.observe(item));
+    })();
+  </script>
+</body>
+</html>

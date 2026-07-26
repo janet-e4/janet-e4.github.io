@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://janet-e4.github.io/corecell-private-data-live/sitemap.xml
