@@ -1,0 +1,940 @@
+<!doctype html>
+<!-- Operational Atlas: structured growing-business wayfinding, four knowledge lanes, and one owner-controlled Core Cell. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Brain for Your Whole Team — CREATAIV Core Cell</title>
+  <meta name="description" content="Turn scattered knowledge into one system every department can draw on. Smart lanes, role-based retrieval, scale without the overhead — and you own it.">
+  <meta name="theme-color" content="#06111c">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://janet-e4.github.io/corecell-smb10/">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CREATAIV">
+  <meta property="og:title" content="One Brain for Your Whole Team — CREATAIV Core Cell">
+  <meta property="og:description" content="Turn scattered knowledge into one system every department can draw on. Smart lanes, role-based retrieval, scale without the overhead — and you own it.">
+  <meta property="og:url" content="https://janet-e4.github.io/corecell-smb10/">
+  <meta property="og:image" content="https://janet-e4.github.io/corecell-smb10/assets/og-preview.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A growing small-business owner and team working in one connected operations environment.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One Brain for Your Whole Team — CREATAIV Core Cell">
+  <meta name="twitter:description" content="Turn scattered knowledge into one system every department can draw on. Smart lanes, role-based retrieval, scale without the overhead — and you own it.">
+  <meta name="twitter:image" content="https://janet-e4.github.io/corecell-smb10/assets/og-preview.webp">
+  <meta name="twitter:image:alt" content="A growing small-business owner and team working in one connected operations environment.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://janet-e4.github.io/corecell-smb10/#business",
+    "name": "CREATAIV Core Cell",
+    "description": "Turn scattered knowledge into one system every department can draw on. Smart lanes, role-based retrieval, scale without the overhead — and you own it.",
+    "url": "https://janet-e4.github.io/corecell-smb10/",
+    "logo": "https://janet-e4.github.io/corecell-smb10/assets/creataiv-logo.png",
+    "image": "https://janet-e4.github.io/corecell-smb10/assets/og-preview.webp"
+  }
+  </script>
+  <style>
+    /* Operational Atlas reminder: editorial operating map, square geometry, mineral fields, teal routes, gold decisions. */
+    @font-face {
+      font-family: "Orbitron";
+      src: url("assets/fonts/Orbitron-Variable.ttf") format("truetype");
+      font-weight: 400 900;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Medium.ttf") format("truetype");
+      font-weight: 500;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Rajdhani";
+      src: url("assets/fonts/Rajdhani-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    :root {
+      --navy: #06111c;
+      --navy-2: #0a1c2b;
+      --ink: #10212b;
+      --muted: #5b6970;
+      --mineral: #f4f1e8;
+      --paper: #fbfaf6;
+      --teal: #00a7a7;
+      --teal-dark: #007b7c;
+      --gold: #d8a84c;
+      --rust: #b85f3f;
+      --line: #c9cec8;
+      --white: #ffffff;
+      --max: 1180px;
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--mineral);
+      font-family: "Rajdhani", system-ui, sans-serif;
+      font-size: 18px;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    button, .button { -webkit-tap-highlight-color: transparent; }
+    ::selection { color: var(--navy); background: rgba(0, 167, 167, 0.35); }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      padding: 10px 14px;
+      color: var(--navy);
+      background: var(--white);
+      transform: translateY(-160%);
+      transition: transform 160ms var(--ease-out);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+    .shell { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      color: var(--white);
+      background: rgba(6, 17, 28, 0.97);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+    }
+    .nav-wrap {
+      min-height: 92px;
+      display: grid;
+      grid-template-columns: minmax(210px, 290px) 1fr auto;
+      align-items: center;
+      gap: 30px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 12px; width: min(290px, 100%); text-decoration: none; }
+    .brand .brand-mark { flex: 0 0 auto; width: 42px; height: 42px; object-fit: contain; }
+    .brand .brand-wordmark { width: min(228px, calc(100% - 54px)); height: auto; }
+    .primary-nav { display: flex; justify-content: flex-end; align-items: center; gap: 26px; }
+    .primary-nav a {
+      position: relative;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 180ms var(--ease-out);
+    }
+    .primary-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background: var(--teal);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms var(--ease-out);
+    }
+    .primary-nav a:hover { color: var(--white); }
+    .primary-nav a:hover::after { transform: scaleX(1); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      color: var(--navy);
+      background: var(--gold);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+      transition: transform 180ms var(--ease-out), background 180ms var(--ease-out), color 180ms var(--ease-out);
+    }
+    .button:hover { background: #e4ba64; transform: translateX(4px); }
+    .button:active { transform: translateX(4px) scale(0.97); }
+    .button--outline { color: var(--white); background: transparent; border-color: rgba(216, 168, 76, 0.82); clip-path: none; }
+    .button--outline:hover { color: var(--navy); background: var(--gold); }
+    .header-cta { white-space: nowrap; }
+
+    main { overflow: hidden; }
+    section { scroll-margin-top: 92px; }
+
+    .hero {
+      position: relative;
+      color: var(--white);
+      background: var(--navy);
+      padding: 48px 0 34px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 62px 62px;
+      mask-image: linear-gradient(to bottom, black, transparent 86%);
+    }
+    .hero-frame {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+      min-height: 650px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: var(--navy-2);
+    }
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 70px 58px 66px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 24px;
+      color: #67d2d2;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 34px; height: 2px; background: var(--teal); }
+    h1, h2, h3 { margin-top: 0; font-family: "Orbitron", sans-serif; }
+    h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-size: clamp(48px, 5.4vw, 82px);
+      font-weight: 640;
+      letter-spacing: -0.055em;
+      line-height: 0.99;
+    }
+    .hero-copy > p {
+      max-width: 620px;
+      margin: 0 0 30px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+    .hero-note { color: rgba(255, 255, 255, 0.58); font-size: 14px; font-weight: 600; }
+    .hero-media { position: relative; min-height: 650px; overflow: hidden; background: #132332; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(10, 28, 43, 0.82) 0%, rgba(10, 28, 43, 0.1) 28%, rgba(6, 17, 28, 0.18) 100%);
+    }
+    .hero-coordinate {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      z-index: 2;
+      padding: 8px 10px;
+      color: rgba(255,255,255,0.72);
+      background: rgba(6,17,28,0.76);
+      border-left: 3px solid var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .hero-lanes {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.16);
+      background: rgba(6,17,28,0.88);
+      backdrop-filter: blur(8px);
+    }
+    .hero-lane { position: relative; padding: 18px 15px 16px; color: rgba(255,255,255,0.78); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .hero-lane + .hero-lane { border-left: 1px solid rgba(255,255,255,0.12); }
+    .hero-lane::before { content: ""; position: absolute; left: 0; top: -3px; width: 62%; height: 3px; background: var(--teal); }
+    .hero-lane:nth-child(2)::before { width: 76%; }
+    .hero-lane:nth-child(3)::before { width: 88%; }
+    .hero-lane:nth-child(4)::before { width: 100%; background: var(--gold); }
+
+    .trust-strip { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 18px; border-top: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14); }
+    .trust-strip span { padding: 14px 18px; color: rgba(255,255,255,0.76); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-align: center; text-transform: uppercase; }
+    .trust-strip span + span { border-left: 1px solid rgba(255,255,255,0.14); }
+
+    .section { padding: 118px 0; }
+    .section--paper { background: var(--paper); }
+    .section--mineral { background: var(--mineral); }
+    .section--navy { color: var(--white); background: var(--navy); }
+    .section-grid { position: relative; display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 52px; }
+    .section-grid::before { content: ""; position: absolute; left: 171px; top: 58px; bottom: -118px; width: 1px; pointer-events: none; background: linear-gradient(to bottom, rgba(0,167,167,0.78), rgba(0,167,167,0.18)); }
+    .section-rail { position: relative; padding-top: 8px; }
+    .section-code { position: relative; display: block; color: var(--teal-dark); font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+    .section-code::before { content: ""; position: absolute; right: -56px; top: 5px; width: 8px; height: 8px; background: var(--teal); transform: rotate(45deg); }
+    .section-code::after { content: ""; position: absolute; right: -52px; top: 8px; width: 42px; height: 2px; background: var(--teal); }
+    .section--navy .section-code { color: #68d4d4; }
+    .section-number { display: block; margin-top: 10px; color: rgba(16,33,43,0.18); font-family: "Orbitron", sans-serif; font-size: 58px; font-weight: 700; line-height: 1; }
+    .section--navy .section-number { color: rgba(255,255,255,0.14); }
+    .section-content { min-width: 0; padding-top: 22px; border-top: 1px solid rgba(0, 167, 167, 0.36); }
+    .section--navy .section-content { border-top-color: rgba(0, 167, 167, 0.58); }
+    .section-kicker { margin: 0 0 13px; color: var(--rust); font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+    .section--navy .section-kicker { color: #68d4d4; }
+    h2 { max-width: 900px; margin-bottom: 28px; font-family: "Rajdhani", sans-serif; font-size: clamp(38px, 4.35vw, 64px); font-weight: 700; letter-spacing: -0.045em; line-height: 1.02; }
+    .lede { max-width: 860px; margin: 0; color: var(--muted); font-size: clamp(21px, 2.3vw, 28px); font-weight: 500; line-height: 1.45; }
+    .section--navy .lede { color: rgba(255,255,255,0.72); }
+
+    .scatter-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 62px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .scatter-item { position: relative; padding: 36px 32px 34px 0; }
+    .scatter-item + .scatter-item { padding-left: 32px; border-left: 1px solid var(--line); }
+    .scatter-item::before { content: ""; position: absolute; left: 0; top: -2px; width: 42%; height: 3px; background: var(--rust); }
+    .scatter-item::after { content: "SCATTER / 01"; position: absolute; left: 0; top: 10px; color: var(--rust); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; }
+    .scatter-item:nth-child(2)::before { width: 64%; background: #9f7658; }
+    .scatter-item:nth-child(2)::after { content: "SCATTER / 02"; color: #8c674e; }
+    .scatter-item:nth-child(3)::before { width: 84%; background: var(--teal); }
+    .scatter-item:nth-child(3)::after { content: "ROUTE / 03"; color: var(--teal-dark); }
+    .scatter-item strong { display: block; margin: 22px 0 10px; font-family: "Rajdhani", sans-serif; font-size: 21px; font-weight: 700; }
+    .scatter-item p { margin: 0; color: var(--muted); }
+
+    .lane-intro { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 70px; align-items: start; }
+    .lane-copy p { color: rgba(255,255,255,0.72); font-size: 20px; }
+    .truth-note { margin-top: 28px; padding: 22px 24px; border-left: 3px solid var(--gold); background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.75); }
+    .knowledge-flow { display: grid; grid-template-columns: minmax(0, 0.9fr) 42px minmax(0, 1.04fr) 42px minmax(0, 0.96fr); align-items: stretch; padding: 26px; border: 1px solid rgba(0,167,167,0.42); background: #0b2232; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.035); }
+    .flow-stage-label { display: block; margin-bottom: 15px; color: #68d4d4; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+    .flow-inputs { display: grid; gap: 9px; }
+    .flow-input { padding: 12px 13px 11px; border-left: 3px solid var(--teal); background: rgba(255,255,255,0.045); }
+    .flow-input:nth-child(2) { border-left-color: #2dbbbb; }
+    .flow-input:nth-child(3) { border-left-color: #55c7c7; }
+    .flow-input:nth-child(4) { border-left-color: #7ad4d4; }
+    .flow-input span { display: block; color: var(--white); font-family: "Rajdhani", sans-serif; font-size: 19px; font-weight: 700; }
+    .flow-input small { display: block; margin-top: 2px; color: rgba(255,255,255,0.62); font-size: 13px; line-height: 1.35; }
+    .flow-route { position: relative; min-width: 42px; }
+    .flow-route::before { content: ""; position: absolute; left: 4px; right: 4px; top: 50%; height: 2px; background: var(--teal); }
+    .flow-route::after { content: ""; position: absolute; right: 4px; top: calc(50% - 5px); border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid var(--teal); }
+    .flow-memory { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 24px; border: 1px solid var(--teal); background: rgba(0,167,167,0.09); }
+    .flow-memory strong { display: block; color: var(--white); font-family: "Rajdhani", sans-serif; font-size: 28px; font-weight: 700; line-height: 1.04; }
+    .flow-memory p { margin: 12px 0 0; color: rgba(255,255,255,0.7); font-size: 15px; }
+    .memory-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
+    .memory-tags span { padding: 6px 8px; border: 1px solid rgba(104,212,212,0.35); color: #9de2e2; font-size: 10px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
+    .flow-output { display: grid; align-content: start; gap: 0; }
+    .flow-output-row { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.11); }
+    .flow-output-row:last-child { border-bottom: 0; }
+    .flow-output-row span { display: block; color: #68d4d4; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .flow-output-row strong { display: block; margin-top: 3px; color: var(--white); font-family: "Rajdhani", sans-serif; font-size: 16px; font-weight: 650; line-height: 1.25; }
+
+    .media-copy { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 70px; align-items: center; }
+    .media-panel { position: relative; min-height: 560px; overflow: hidden; background: var(--navy-2); }
+    .media-panel img { width: 100%; height: 100%; object-fit: cover; }
+    .media-panel::before { content: ""; position: absolute; z-index: 2; inset: 22px auto auto 22px; width: 54px; height: 54px; border-left: 3px solid var(--teal); border-top: 3px solid var(--teal); }
+    .media-panel::after { content: "ONE SYSTEM / NO RIP-AND-REPLACE"; position: absolute; z-index: 2; right: 0; bottom: 0; max-width: 78%; padding: 14px 18px; color: var(--white); background: rgba(6,17,28,0.9); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .copy-stack h2 { margin-bottom: 22px; }
+    .copy-stack > p { color: var(--muted); font-size: 20px; }
+    .scale-list { margin-top: 36px; border-top: 1px solid var(--line); }
+    .scale-row { display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .scale-row b { color: var(--teal-dark); font-family: "Orbitron", sans-serif; font-size: 13px; }
+    .scale-row strong { display: block; margin-bottom: 4px; font-family: "Orbitron", sans-serif; font-size: 16px; }
+    .scale-row span { color: var(--muted); }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 58px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .step { position: relative; min-height: 310px; padding: 38px 32px 34px 0; }
+    .step + .step { padding-left: 32px; border-left: 1px solid var(--line); }
+    .step::before { content: "INPUT / TEACH"; position: absolute; right: 24px; top: 16px; color: var(--teal-dark); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; }
+    .step:nth-child(2)::before { content: "ROUTE / SHAPE"; }
+    .step:nth-child(3)::before { content: "OUTPUT / DRAW"; color: #9a6d20; }
+    .step::after { content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 3px; background: var(--teal); transform-origin: left; }
+    .step:nth-child(2)::after { background: var(--teal-dark); }
+    .step:nth-child(3)::after { background: var(--gold); }
+    .step-no { color: var(--teal-dark); font-family: "Orbitron", sans-serif; font-size: 13px; font-weight: 700; }
+    .step h3 { margin: 70px 0 16px; font-family: "Rajdhani", sans-serif; font-size: 29px; font-weight: 700; }
+    .step p { margin: 0; color: var(--muted); }
+    .conversation-line { margin: 44px 0 0; padding: 25px 28px; color: var(--white); background: var(--navy); border-left: 4px solid var(--gold); font-family: "Orbitron", sans-serif; font-size: clamp(18px, 2vw, 25px); }
+    .program { margin-top: 42px; padding: 30px; border: 1px solid var(--line); background: #f0ede4; }
+    .program-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 24px; }
+    .program-head h3 { margin: 0; font-family: "Rajdhani", sans-serif; font-size: 28px; font-weight: 700; }
+    .program-head span { color: var(--teal-dark); font-family: "Orbitron", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+    .program-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #aeb9b5; }
+    .program-step { position: relative; padding: 24px 24px 8px 0; }
+    .program-step + .program-step { padding-left: 24px; border-left: 1px solid #aeb9b5; }
+    .program-step b { display: block; margin-bottom: 8px; color: var(--rust); font-family: "Orbitron", sans-serif; font-size: 12px; letter-spacing: 0.12em; }
+    .program-step strong { display: block; font-size: 22px; }
+    .program-step p { margin: 8px 0 0; color: var(--muted); }
+    .operator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 26px; background: var(--line); }
+    .operator-card { padding: 24px; background: var(--paper); }
+    .operator-card span { color: var(--teal-dark); font-size: 12px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+    .operator-card h3 { margin: 8px 0 8px; font-family: "Rajdhani", sans-serif; font-size: 25px; font-weight: 700; }
+    .operator-card p { margin: 0; color: var(--muted); }
+    .knowledge-figure { position: relative; margin: 52px 0 0; min-height: 470px; overflow: hidden; background: var(--navy-2); }
+    .knowledge-figure img { width: 100%; height: 100%; min-height: 470px; object-fit: cover; object-position: center; }
+    .knowledge-figure figcaption { position: absolute; left: 0; bottom: 0; max-width: 680px; padding: 18px 22px; color: var(--white); background: rgba(6,17,28,0.9); border-left: 4px solid var(--teal); font-size: 15px; font-weight: 600; }
+
+    .price-layout { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 70px; align-items: start; }
+    .price-card { position: sticky; top: 118px; padding: 42px; color: var(--white); background: var(--navy-2); border-top: 5px solid var(--gold); }
+    .price-label { color: #68d4d4; font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+    .price-value { margin: 13px 0 2px; font-family: "Orbitron", sans-serif; font-size: clamp(50px, 6vw, 80px); font-weight: 700; letter-spacing: -0.055em; line-height: 1; }
+    .price-plus { color: rgba(255,255,255,0.7); font-size: 20px; }
+    .price-card hr { margin: 30px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.16); }
+    .price-card p { color: rgba(255,255,255,0.72); }
+    .payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 24px; background: rgba(255,255,255,0.15); }
+    .payment { padding: 18px; background: #10283a; }
+    .payment strong { display: block; color: var(--gold); font-family: "Orbitron", sans-serif; font-size: 20px; }
+    .payment span { color: rgba(255,255,255,0.64); font-size: 14px; }
+    .cost-ledger { border-top: 1px solid var(--line); }
+    .ledger-row { display: grid; grid-template-columns: 176px 1fr; gap: 26px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .ledger-row h3 { margin: 0; font-family: "Rajdhani", sans-serif; font-size: 19px; font-weight: 700; }
+    .ledger-row p { margin: 0; color: var(--muted); }
+    .ledger-row b { color: var(--ink); }
+    .pricing-truth { margin-top: 28px; color: var(--muted); font-size: 15px; }
+
+    .questions { position: relative; margin-top: 48px; padding-left: 22px; border-top: 1px solid rgba(0,167,167,0.58); border-left: 2px solid var(--teal); }
+    details { position: relative; border-bottom: 1px solid rgba(255,255,255,0.18); }
+    details::before { content: ""; position: absolute; left: -27px; top: 44px; width: 9px; height: 9px; background: var(--teal); transform: rotate(45deg); }
+    details[open]::before { background: var(--gold); }
+    summary { position: relative; display: grid; grid-template-columns: 52px 1fr 30px; align-items: center; gap: 18px; min-height: 98px; padding: 18px 0; cursor: pointer; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    .q-no { color: #68d4d4; font-family: "Orbitron", sans-serif; font-size: 13px; }
+    .q-title { font-family: "Rajdhani", sans-serif; font-size: clamp(21px, 2.1vw, 27px); font-weight: 700; }
+    .q-mark { position: relative; width: 24px; height: 24px; }
+    .q-mark::before, .q-mark::after { content: ""; position: absolute; left: 50%; top: 50%; width: 18px; height: 2px; background: var(--teal); transform: translate(-50%, -50%); transition: transform 180ms var(--ease-out), background 180ms var(--ease-out); }
+    .q-mark::after { transform: translate(-50%, -50%) rotate(90deg); }
+    details[open] .q-mark::after { transform: translate(-50%, -50%) rotate(0deg); }
+    .answer { max-width: 820px; padding: 0 0 34px 70px; color: rgba(255,255,255,0.72); font-size: 20px; }
+
+    .contact { position: relative; padding: 112px 0; color: var(--white); background: var(--navy-2); }
+    .contact::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(90deg, var(--teal) 0 58%, var(--gold) 58% 82%, var(--rust) 82% 100%); }
+    .contact-layout { display: grid; grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr); gap: 78px; }
+    .contact-copy h2 { margin-bottom: 22px; }
+    .contact-copy p { max-width: 540px; color: rgba(255,255,255,0.7); font-size: 20px; }
+    .contact-points { margin-top: 38px; display: grid; gap: 14px; }
+    .contact-point { display: grid; grid-template-columns: 22px 1fr; gap: 14px; color: rgba(255,255,255,0.68); }
+    .contact-point::before { content: ""; width: 12px; height: 12px; margin-top: 7px; border: 2px solid var(--teal); transform: rotate(45deg); }
+    .lead-form { padding: 38px; color: var(--ink); background: var(--paper); }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .field { display: grid; gap: 8px; }
+    .field--full { grid-column: 1 / -1; }
+    label { color: var(--ink); font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+    input, select, textarea { width: 100%; border: 1px solid #aeb6b3; border-radius: 0; color: var(--ink); background: var(--white); padding: 13px 14px; transition: border-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out); }
+    input, select { min-height: 52px; }
+    textarea { min-height: 138px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--teal-dark); box-shadow: 0 0 0 3px rgba(0, 167, 167, 0.13); outline: none; }
+    .form-privacy { margin: 18px 0; color: var(--muted); font-size: 14px; }
+    .lead-form .button { width: 100%; border: 0; cursor: pointer; }
+    .form-status { min-height: 24px; margin: 12px 0 0; color: var(--teal-dark); font-size: 14px; font-weight: 600; }
+
+    .site-footer { color: rgba(255,255,255,0.65); background: #030a10; }
+    .footer-main { display: grid; grid-template-columns: minmax(220px, 320px) 1fr; gap: 70px; align-items: center; padding: 56px 0 42px; }
+    .footer-brand img { width: min(280px, 100%); }
+    .footer-copy { justify-self: end; max-width: 650px; text-align: right; }
+    .footer-copy p { margin: 0 0 8px; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding: 20px 0 26px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 13px; }
+
+    .js .reveal { opacity: 0; transform: translateY(34px); transition: opacity 260ms var(--ease-out), transform 260ms var(--ease-out); }
+    .js .reveal[data-route="left"] { transform: translateX(-34px); }
+    .js .reveal[data-route="right"] { transform: translateX(34px); }
+    .js .reveal.is-visible { opacity: 1; transform: translate(0, 0); }
+    @media (max-width: 1080px) {
+      .nav-wrap { grid-template-columns: minmax(190px, 250px) 1fr auto; gap: 20px; }
+      .primary-nav { gap: 17px; }
+      .primary-nav a { font-size: 11px; }
+      .hero-frame { grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); }
+      .hero-copy { padding: 56px 42px 58px; }
+      .section-grid { grid-template-columns: 110px minmax(0, 1fr); gap: 34px; }
+      .section-grid::before { left: 127px; }
+      .section-code::before { right: -38px; }
+      .section-code::after { right: -34px; width: 27px; }
+      .lane-intro, .media-copy, .price-layout, .contact-layout { gap: 48px; }
+    }
+
+    @media (max-width: 900px) {
+      .shell { width: min(calc(100% - 30px), var(--max)); }
+      .nav-wrap { min-height: 80px; grid-template-columns: minmax(190px, 250px) auto; }
+      .primary-nav { display: none; }
+      .header-cta { justify-self: end; }
+      .hero { padding-top: 28px; }
+      .hero-frame { grid-template-columns: 1fr; min-height: 0; }
+      .hero-copy { padding: 56px 42px; }
+      .hero-media { min-height: 520px; }
+      .hero-media::after { background: linear-gradient(180deg, rgba(10,28,43,0.22), rgba(6,17,28,0.34)); }
+      .section { padding: 92px 0; }
+      .section-grid { grid-template-columns: 1fr; gap: 26px; }
+      .section-grid::before, .section-code::before, .section-code::after { display: none; }
+      .section-rail { display: flex; align-items: center; gap: 15px; padding: 0; }
+      .section-number { margin: 0; font-size: 34px; }
+      .lane-intro, .media-copy, .price-layout, .contact-layout { grid-template-columns: 1fr; }
+      .lane-intro { gap: 44px; }
+      .media-panel { min-height: 500px; }
+      .price-card { position: static; }
+      .contact-layout { gap: 48px; }
+    }
+
+    @media (max-width: 680px) {
+      body { font-size: 17px; }
+      .nav-wrap { grid-template-columns: 1fr auto; min-height: 72px; gap: 12px; }
+      .brand { width: 210px; gap: 9px; }
+      .brand .brand-mark { width: 34px; height: 34px; }
+      .brand .brand-wordmark { width: min(167px, calc(100% - 43px)); }
+      .header-cta { min-height: 42px; padding: 10px 12px; font-size: 11px; }
+      .hero-frame { border-left: 0; border-right: 0; }
+      .hero-copy { padding: 46px 24px 44px; }
+      h1 { font-size: clamp(40px, 13vw, 62px); }
+      .hero-copy > p { font-size: 18px; }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-note { padding-left: 2px; }
+      .hero-media { min-height: 440px; }
+      .hero-media img { object-position: 68% center; }
+      .hero-coordinate { font-size: 10px; }
+      .hero-lanes { grid-template-columns: 1fr 1fr; }
+      .hero-lane:nth-child(3), .hero-lane:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.12); }
+      .trust-strip { grid-template-columns: 1fr; }
+      .trust-strip span + span { border-left: 0; border-top: 1px solid rgba(255,255,255,0.14); }
+      .section { padding: 78px 0; }
+      .scatter-grid, .steps { grid-template-columns: 1fr; }
+      .scatter-item, .scatter-item + .scatter-item, .step, .step + .step { padding: 30px 0; border-left: 0; }
+      .scatter-item + .scatter-item, .step + .step { border-top: 1px solid var(--line); }
+      .step { min-height: 0; }
+      .step h3 { margin-top: 46px; }
+      .knowledge-flow { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
+      .flow-route { min-height: 34px; }
+      .flow-route::before { left: 50%; right: auto; top: 0; bottom: 0; width: 2px; height: auto; }
+      .flow-route::after { right: auto; left: calc(50% - 5px); top: auto; bottom: 0; border-top: 8px solid var(--teal); border-right: 5px solid transparent; border-bottom: 0; border-left: 5px solid transparent; }
+      .flow-memory { padding: 22px; }
+      .media-panel { min-height: 410px; }
+      .knowledge-figure, .knowledge-figure img { min-height: 360px; }
+      .program { padding: 24px 20px; }
+      .program-head { align-items: start; flex-direction: column; gap: 8px; }
+      .program-grid, .operator-grid { grid-template-columns: 1fr; }
+      .program-step, .program-step + .program-step { padding: 22px 0; border-left: 0; border-bottom: 1px solid #aeb9b5; }
+      .program-step:last-child { border-bottom: 0; }
+      .payment-grid { grid-template-columns: 1fr; }
+      .ledger-row { grid-template-columns: 1fr; gap: 10px; }
+      summary { grid-template-columns: 40px 1fr 26px; gap: 12px; min-height: 88px; }
+      .answer { padding-left: 52px; font-size: 18px; }
+      .lead-form { padding: 28px 22px; }
+      .field-grid { grid-template-columns: 1fr; }
+      .field--full { grid-column: auto; }
+      .footer-main { grid-template-columns: 1fr; gap: 34px; }
+      .footer-copy { justify-self: start; text-align: left; }
+      .footer-bottom { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      .js .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="CREATAIV Core Cell home">
+        <img class="brand-mark" src="assets/corecell-mark.png" width="512" height="512" alt="" aria-hidden="true">
+        <img class="brand-wordmark" src="assets/creataiv-horizontal-tight.webp" width="700" height="190" alt="CREATAIV">
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#idea">The idea</a>
+        <a href="#scale">Scale</a>
+        <a href="#cost">What it costs</a>
+        <a href="#questions">Hard questions</a>
+      </nav>
+      <a class="button button--outline header-cta" href="#contact">Talk to Nick</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell hero-frame">
+        <div class="hero-copy reveal" data-route="left">
+          <p class="eyebrow">For growing teams with real departments</p>
+          <h1 id="hero-title">Ten people. One brain. Every department smarter.</h1>
+          <p>At ten people your knowledge is scattered—in heads, in files, across a stack of apps—and there is no IT department to wrangle it. Core Cell turns it into one system your whole team can draw on: departments as smart lanes, retrieval by role, and a consistent voice across the operation. You own it, and it scales with you instead of taxing you per seat.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Let’s talk about scaling this across my team</a>
+            <span class="hero-note">Nick follows up personally.</span>
+          </div>
+        </div>
+        <div class="hero-media reveal" data-route="right">
+          <picture>
+            <source media="(max-width: 680px)" srcset="assets/hero-owner-mobile.webp">
+            <img src="assets/hero-owner-desktop.webp" width="1920" height="1080" alt="An anonymous growing-business owner with a small team working in one connected operations environment.">
+          </picture>
+          <span class="hero-coordinate">SMB / 10 / OPERATING MAP</span>
+          <div class="hero-lanes" aria-label="Department knowledge lanes">
+            <span class="hero-lane">Sales</span>
+            <span class="hero-lane">Service</span>
+            <span class="hero-lane">Operations</span>
+            <span class="hero-lane">Marketing</span>
+          </div>
+        </div>
+      </div>
+      <div class="shell trust-strip" aria-label="Core Cell ownership principles">
+        <span>Your machine</span>
+        <span>Your data</span>
+        <span>Your choice of AI</span>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="pain" aria-labelledby="pain-title">
+      <div class="shell section-grid">
+        <aside class="section-rail" aria-hidden="true">
+          <span class="section-code">Scatter</span>
+          <span class="section-number">01</span>
+        </aside>
+        <div class="section-content reveal">
+          <p class="section-kicker">The pain</p>
+          <h2 id="pain-title">Your company already knows the answer. Finding who has it is the problem.</h2>
+          <p class="lede">Sales knows one thing, operations knows another, and the answer to any real question lives in someone’s head or an app nobody else opens. As you grow, that scatter gets worse—and every new hire has to relearn what the company already knew.</p>
+          <div class="scatter-grid">
+            <article class="scatter-item">
+              <strong>In people</strong>
+              <p>The best process is often the one your most experienced person remembers to explain.</p>
+            </article>
+            <article class="scatter-item">
+              <strong>Across apps</strong>
+              <p>Files, chat, CRM notes, service records, and campaign drafts each hold a different piece.</p>
+            </article>
+            <article class="scatter-item">
+              <strong>Lost in growth</strong>
+              <p>More hands create more versions unless the company has one shared operating memory.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--navy" id="idea" aria-labelledby="idea-title">
+      <div class="shell section-grid">
+        <aside class="section-rail" aria-hidden="true">
+          <span class="section-code">One system</span>
+          <span class="section-number">02</span>
+        </aside>
+        <div class="section-content">
+          <p class="section-kicker reveal">The idea</p>
+          <div class="lane-intro">
+            <div class="lane-copy reveal" data-route="left">
+              <h2 id="idea-title">Departments become smart knowledge lanes—not new silos.</h2>
+              <p>Departments are more than org boxes. They are the places knowledge is stored, maintained, and retrieved. Core Cell makes those lanes explicit: Sales, Service, Operations, and Marketing can organize the company’s methods, history, and decisions so the right role can draw on the right context.</p>
+              <p>The same owner-controlled Core Cell keeps those lanes connected, so the business can answer with one operating voice instead of four competing versions.</p>
+              <div class="truth-note"><strong>What this means:</strong> you choose what to teach Core Cell and how the lanes are organized. It does not claim to ingest every app automatically, and useful results depend on the knowledge your team maintains.</div>
+            </div>
+            <div class="knowledge-flow reveal" data-route="right" aria-label="Department knowledge flows into shared company memory, then returns as role-based answers">
+              <div class="flow-stage flow-stage--inputs">
+                <span class="flow-stage-label">01 / Department inputs</span>
+                <div class="flow-inputs">
+                  <div class="flow-input"><span>Sales</span><small>Offers · objections · account history</small></div>
+                  <div class="flow-input"><span>Service</span><small>Intake · diagnosis · customer context</small></div>
+                  <div class="flow-input"><span>Operations</span><small>Process · scheduling · handoffs</small></div>
+                  <div class="flow-input"><span>Marketing</span><small>Brand voice · proof · campaign history</small></div>
+                </div>
+              </div>
+              <div class="flow-route" aria-hidden="true"></div>
+              <div class="flow-memory">
+                <span class="flow-stage-label">02 / Shared company knowledge</span>
+                <strong>One owned operating memory</strong>
+                <p>Methods, history, decisions, and approved voice stay connected instead of being trapped inside one department.</p>
+                <div class="memory-tags"><span>Your machine</span><span>Your data</span><span>Your model</span><span>Your backup</span></div>
+              </div>
+              <div class="flow-route" aria-hidden="true"></div>
+              <div class="flow-output">
+                <span class="flow-stage-label">03 / Role-based retrieval</span>
+                <div class="flow-output-row"><span>Sales role</span><strong>Offer language + account context</strong></div>
+                <div class="flow-output-row"><span>Service role</span><strong>Customer history + proven response</strong></div>
+                <div class="flow-output-row"><span>Operations role</span><strong>Current process + handoff standard</strong></div>
+                <div class="flow-output-row"><span>Marketing role</span><strong>Approved voice + reusable proof</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mineral" id="scale" aria-labelledby="scale-title">
+      <div class="shell media-copy">
+        <figure class="media-panel reveal" data-route="left">
+          <img src="assets/department-lanes.webp" width="2304" height="1536" loading="lazy" decoding="async" alt="Four practical small-business work zones connected to one central knowledge hub.">
+        </figure>
+        <div class="copy-stack reveal" data-route="right">
+          <p class="section-kicker">Scale without overhead</p>
+          <h2 id="scale-title">Grow the output, not the operating drag.</h2>
+          <p>Back up roles, multiply your best people, and keep the tools you already run. Core Cell sits alongside your line-of-business software; it does not ask you to rip out the systems your company already depends on.</p>
+          <div class="scale-list">
+            <div class="scale-row"><b>01</b><div><strong>Back up roles</strong><span>Make essential know-how available when the person who normally holds it is busy, offsite, or training someone new.</span></div></div>
+            <div class="scale-row"><b>02</b><div><strong>Multiply the best</strong><span>Turn proven explanations, decisions, and methods into reusable operating context for the whole team.</span></div></div>
+            <div class="scale-row"><b>03</b><div><strong>Keep your stack</strong><span>Use Core Cell beside the applications you already run rather than rebuilding the company around another SaaS platform.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="how" aria-labelledby="how-title">
+      <div class="shell section-grid">
+        <aside class="section-rail" aria-hidden="true">
+          <span class="section-code">Conversation</span>
+          <span class="section-number">03</span>
+        </aside>
+        <div class="section-content reveal">
+          <p class="section-kicker">How it works</p>
+          <h2 id="how-title">You talk. It organizes. Your team retrieves by role.</h2>
+          <p class="lede">Core Cell is built around the way a small company already teaches: through conversation, examples, files, decisions, and the language people use every day. You choose the AI behind it, can swap that model, and control where its backup lives.</p>
+          <div class="steps">
+            <article class="step">
+              <span class="step-no">01 / TALK</span>
+              <h3>Teach it like a person</h3>
+              <p>Explain the work, provide the source material you choose, and correct it as the business changes. There is no separate language to learn.</p>
+            </article>
+            <article class="step">
+              <span class="step-no">02 / ORGANIZE</span>
+              <h3>Shape the business lanes</h3>
+              <p>Arrange knowledge around the departments and responsibilities your company actually has, rather than a vendor’s generic workspace.</p>
+            </article>
+            <article class="step">
+              <span class="step-no">03 / RETRIEVE</span>
+              <h3>Draw on the right context</h3>
+              <p>Team members ask naturally and retrieve from the role-appropriate context. Voice remains more consistent because the operation draws from one owned source.</p>
+            </article>
+          </div>
+          <p class="conversation-line">If you can hold a conversation, you can run this.</p>
+          <div class="program" aria-labelledby="program-title">
+            <div class="program-head">
+              <h3 id="program-title">The 90-day path to owner control</h3>
+              <span>Move In → Hand It Over → Run It</span>
+            </div>
+            <div class="program-grid">
+              <article class="program-step"><b>01 / MOVE IN</b><strong>Teach the first working lanes.</strong><p>Bring the source material you choose and capture the explanations, decisions, and examples the team relies on.</p></article>
+              <article class="program-step"><b>02 / HAND IT OVER</b><strong>Put the owner in control.</strong><p>Shape roles, corrections, model choice, and the backup destination so the business can operate without vendor dependence.</p></article>
+              <article class="program-step"><b>03 / RUN IT</b><strong>Use it in the real operation.</strong><p>Retrieve by role, keep the knowledge current, and expand the system as the team proves where it is useful.</p></article>
+            </div>
+          </div>
+          <div class="operator-grid" aria-label="Core Cell operating roles">
+            <article class="operator-card"><span>Janet / daily interface</span><h3>The teammate your people talk to.</h3><p>Janet is the local, conversational way the team teaches and retrieves from Core Cell. If ordinary work keeps requiring the builder, Janet is not doing her job.</p></article>
+            <article class="operator-card"><span>Fritz / deeper support</span><h3>The builder behind the handoff.</h3><p>Fritz handles deeper support and changes when needed, while the day-to-day system remains designed for the owner and team to run.</p></article>
+          </div>
+          <figure class="knowledge-figure">
+            <img src="assets/team-knowledge.webp" width="2304" height="1536" loading="lazy" decoding="async" alt="A small-company team organizing shared operating knowledge on a visual planning wall.">
+            <figcaption>The structure becomes useful when the team teaches it together, corrects it together, and retrieves from the same owned operating memory.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mineral" id="cost" aria-labelledby="cost-title">
+      <div class="shell section-grid">
+        <aside class="section-rail" aria-hidden="true">
+          <span class="section-code">Investment</span>
+          <span class="section-number">04</span>
+        </aside>
+        <div class="section-content price-layout">
+          <div class="price-card reveal" data-route="left">
+            <span class="price-label">Core Cell license</span>
+            <div class="price-value">$7,500</div>
+            <div class="price-plus">$7,500 + hardware, billed separately</div>
+            <hr>
+            <p>Hardware is typically <strong>$500–$5,000</strong>, based on the system you choose. You own the licensed version and the machine it runs on.</p>
+            <div class="payment-grid">
+              <div class="payment"><strong>$3,750</strong><span>payment at signing</span></div>
+              <div class="payment"><strong>$3,750</strong><span>payment on day one of the 90-day program</span></div>
+            </div>
+          </div>
+          <div class="reveal" data-route="right">
+            <p class="section-kicker">What it costs</p>
+            <h2 id="cost-title">A business system you own—not another per-seat spiral.</h2>
+            <div class="cost-ledger">
+              <div class="ledger-row">
+                <h3>90-day program</h3>
+                <p><b>Move In → Hand It Over → Run It.</b> The license is paid in the two equal installments shown at left. Hardware is selected for your requirements and billed separately.</p>
+              </div>
+              <div class="ledger-row">
+                <h3>Level-one support</h3>
+                <p>Required support begins on day 91 at <b>$650 per month</b>, billed quarterly at <b>$1,950 per quarter</b>.</p>
+              </div>
+              <div class="ledger-row">
+                <h3>Hive Mind: separate add-on</h3>
+                <p>The right-sized tier for a company of roughly ten staff is <b>$175 per month</b> and includes your own Buzz install. It is a business tier rather than a charge multiplied by every seat.</p>
+              </div>
+              <div class="ledger-row">
+                <h3>Single-person tier</h3>
+                <p>The separate single-person Hive Mind tier is <b>$49 per month</b>. It is included here for comparison, not as the recommended tier for this team size.</p>
+              </div>
+            </div>
+            <p class="pricing-truth">The startup amount does not include hardware. Hive Mind tiers are separate from the required day-91 support. Backup storage, cloud services, or third-party model usage remain in your name and may carry their own provider charges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--navy" id="questions" aria-labelledby="questions-title">
+      <div class="shell section-grid">
+        <aside class="section-rail" aria-hidden="true">
+          <span class="section-code">Ask directly</span>
+          <span class="section-number">05</span>
+        </aside>
+        <div class="section-content reveal">
+          <p class="section-kicker">Hard questions you can ask</p>
+          <h2 id="questions-title">No mystery box. Ask what changes for your team.</h2>
+          <div class="questions">
+            <details>
+              <summary><span class="q-no">01</span><span class="q-title">How painful is the rollout across my team?</span><span class="q-mark" aria-hidden="true"></span></summary>
+              <div class="answer">People work with Core Cell through ordinary conversation rather than another dense dashboard. The 90-day Move In → Hand It Over → Run It program gives the rollout a guided order, starting with the highest-value lane. It is designed to reduce disruption, not to promise a zero-effort deployment.</div>
+            </details>
+            <details>
+              <summary><span class="q-no">02</span><span class="q-title">Will our knowledge finally stop being siloed?</span><span class="q-mark" aria-hidden="true"></span></summary>
+              <div class="answer">That is the operating goal: departments become connected smart lanes that people can retrieve from by role. Core Cell supplies the shared structure; the quality of the result still depends on what your team teaches, corrects, and maintains.</div>
+            </details>
+            <details>
+              <summary><span class="q-no">03</span><span class="q-title">Will it replace the software we already run?</span><span class="q-mark" aria-hidden="true"></span></summary>
+              <div class="answer">No. Core Cell sits alongside your existing line-of-business tools. It gives the company an owned knowledge and retrieval layer without asking you to rip out the software that already runs sales, service, operations, or marketing.</div>
+            </details>
+            <details>
+              <summary><span class="q-no">04</span><span class="q-title">How do per-seat costs scale as we grow?</span><span class="q-mark" aria-hidden="true"></span></summary>
+              <div class="answer">You own the licensed system, and the recommended Hive Mind business tier is a flat $175 per month with your own Buzz install rather than a charge multiplied by every seat. Required day-91 support is a separate $650 per month, billed quarterly.</div>
+            </details>
+            <details>
+              <summary><span class="q-no">05</span><span class="q-title">Whose AI and whose data?</span><span class="q-mark" aria-hidden="true"></span></summary>
+              <div class="answer">You choose the model behind Core Cell and can change it. Your business knowledge remains on your machine, you control the backup destination, and the licensed Core Cell version is yours rather than a dependency on one model vendor.</div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-layout">
+        <div class="contact-copy reveal" data-route="left">
+          <p class="eyebrow">Map the first lane</p>
+          <h2 id="contact-title">Let’s talk about scaling this across your team.</h2>
+          <p>Tell Nick how many people are involved and where knowledge gets stuck today. The first conversation is about fit, rollout order, and the operating lane worth fixing first.</p>
+          <div class="contact-points">
+            <div class="contact-point">Bring the apps and processes you already use.</div>
+            <div class="contact-point">Start with one high-value department lane.</div>
+            <div class="contact-point">Keep ownership of the machine, data, model, and licensed version.</div>
+          </div>
+        </div>
+        <form class="lead-form reveal" data-route="right" id="lead-form" action="mailto:nick@e4lv.com?subject=Core%20Cell%20for%20my%20growing%20team" method="post" enctype="text/plain">
+          <div class="field-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="contact-detail">Email or phone</label>
+              <input id="contact-detail" name="contact" autocomplete="email" required>
+            </div>
+            <div class="field--full field">
+              <label for="team-size">Team size</label>
+              <select id="team-size" name="team_size" required>
+                <option value="" disabled selected>Select a range</option>
+                <option value="2–4 people">2–4 people</option>
+                <option value="5–7 people">5–7 people</option>
+                <option value="8–10 people">8–10 people</option>
+                <option value="More than 10 people">More than 10 people</option>
+              </select>
+            </div>
+            <div class="field--full field">
+              <label for="knowledge">Where does knowledge get stuck?</label>
+              <textarea id="knowledge" name="knowledge" placeholder="For example: sales handoffs, service history, operations process, marketing voice…" required></textarea>
+            </div>
+          </div>
+          <p class="form-privacy">This website stores nothing. Your submission opens your email program and addresses the message to Nick. Please do not include customer names, account credentials, regulated data, or other sensitive details.</p>
+          <button class="button" type="submit">Let’s talk about scaling this across my team</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-main">
+      <a class="footer-brand" href="#top" aria-label="Back to top">
+        <img src="assets/creataiv-horizontal.webp" width="900" height="250" loading="lazy" decoding="async" alt="CREATAIV">
+      </a>
+      <div class="footer-copy">
+        <p><strong>Core Cell by CREATAIV</strong> — owner-controlled AI infrastructure for a growing small business. Community access is available through <a href="https://buzz.creataiv.com/" rel="noopener">Buzz</a>.</p>
+        <p>Plain privacy: no analytics, tracking pixel, automated chat widget, website database, or third-party form processor. The form above opens your own email program and addresses the message to Nick.</p>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <span>© 2026 CREATAIV. All rights reserved.</span>
+      <span>Your machine · Your data · Your choice of AI</span>
+    </div>
+  </footer>
+
+  <script>
+    // Operational Atlas: progressive enhancement only; core copy and the Nick mail form remain usable without JavaScript.
+    document.documentElement.classList.add('js');
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealItems = document.querySelectorAll('.reveal');
+    if (reducedMotion || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    }
+
+    const form = document.getElementById('lead-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', (event) => {
+      if (!form.checkValidity()) return;
+      event.preventDefault();
+      const data = new FormData(form);
+      const subject = 'Core Cell for my growing team';
+      const body = [
+        `Name: ${data.get('name')}`,
+        `Email or phone: ${data.get('contact')}`,
+        `Team size: ${data.get('team_size')}`,
+        '',
+        'Where knowledge gets stuck:',
+        data.get('knowledge')
+      ].join('\n');
+      status.textContent = 'Opening your email program with a message addressed to Nick…';
+      window.location.href = `mailto:nick@e4lv.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</body>
+</html>
