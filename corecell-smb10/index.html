@@ -132,13 +132,25 @@
     .nav-wrap {
       min-height: 92px;
       display: grid;
-      grid-template-columns: minmax(210px, 290px) 1fr auto;
+      grid-template-columns: minmax(150px, 190px) 1fr auto;
       align-items: center;
       gap: 30px;
     }
-    .brand { display: inline-flex; align-items: center; gap: 12px; width: min(290px, 100%); text-decoration: none; }
-    .brand .brand-mark { flex: 0 0 auto; width: 42px; height: 42px; object-fit: contain; }
-    .brand .brand-wordmark { width: min(228px, calc(100% - 54px)); height: auto; }
+    .brand {
+      align-self: stretch;
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 92px;
+      text-decoration: none;
+    }
+    .brand .brand-wordmark {
+      display: block;
+      width: auto;
+      height: 46px;
+      max-width: 100%;
+      object-fit: contain;
+    }
     .primary-nav { display: flex; justify-content: flex-end; align-items: center; gap: 26px; }
     .primary-nav a {
       position: relative;
@@ -257,7 +269,7 @@
     .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
     .hero-note { color: rgba(255, 255, 255, 0.58); font-size: 14px; font-weight: 600; }
     .hero-media { position: relative; min-height: 650px; overflow: hidden; background: #132332; }
-    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; }
     .hero-media::after {
       content: "";
       position: absolute;
@@ -471,7 +483,7 @@
     .js .reveal[data-route="right"] { transform: translateX(34px); }
     .js .reveal.is-visible { opacity: 1; transform: translate(0, 0); }
     @media (max-width: 1080px) {
-      .nav-wrap { grid-template-columns: minmax(190px, 250px) 1fr auto; gap: 20px; }
+      .nav-wrap { grid-template-columns: minmax(140px, 170px) 1fr auto; gap: 20px; }
       .primary-nav { gap: 17px; }
       .primary-nav a { font-size: 11px; }
       .hero-frame { grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); }
@@ -485,13 +497,16 @@
 
     @media (max-width: 900px) {
       .shell { width: min(calc(100% - 30px), var(--max)); }
-      .nav-wrap { min-height: 80px; grid-template-columns: minmax(190px, 250px) auto; }
+      .nav-wrap { min-height: 80px; grid-template-columns: minmax(130px, 160px) auto; }
+      .brand { min-height: 80px; }
+      .brand .brand-wordmark { height: 42px; }
       .primary-nav { display: none; }
       .header-cta { justify-self: end; }
       .hero { padding-top: 28px; }
       .hero-frame { grid-template-columns: 1fr; min-height: 0; }
       .hero-copy { padding: 56px 42px; }
       .hero-media { min-height: 520px; }
+      .hero-media img { object-position: 66% 50%; }
       .hero-media::after { background: linear-gradient(180deg, rgba(10,28,43,0.22), rgba(6,17,28,0.34)); }
       .section { padding: 92px 0; }
       .section-grid { grid-template-columns: 1fr; gap: 26px; }
@@ -508,9 +523,8 @@
     @media (max-width: 680px) {
       body { font-size: 17px; }
       .nav-wrap { grid-template-columns: 1fr auto; min-height: 72px; gap: 12px; }
-      .brand { width: 210px; gap: 9px; }
-      .brand .brand-mark { width: 34px; height: 34px; }
-      .brand .brand-wordmark { width: min(167px, calc(100% - 43px)); }
+      .brand { min-height: 72px; }
+      .brand .brand-wordmark { width: auto; height: 34px; }
       .header-cta { min-height: 42px; padding: 10px 12px; font-size: 11px; }
       .hero-frame { border-left: 0; border-right: 0; }
       .hero-copy { padding: 46px 24px 44px; }
@@ -519,7 +533,7 @@
       .hero-actions { align-items: stretch; flex-direction: column; }
       .hero-note { padding-left: 2px; }
       .hero-media { min-height: 440px; }
-      .hero-media img { object-position: 68% center; }
+      .hero-media img { object-position: 50% 38%; }
       .hero-coordinate { font-size: 10px; }
       .hero-lanes { grid-template-columns: 1fr 1fr; }
       .hero-lane:nth-child(3), .hero-lane:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.12); }
@@ -568,8 +582,7 @@
   <header class="site-header">
     <div class="shell nav-wrap">
       <a class="brand" href="#top" aria-label="CREATAIV Core Cell home">
-        <img class="brand-mark" src="assets/corecell-mark.png" width="512" height="512" alt="" aria-hidden="true">
-        <img class="brand-wordmark" src="assets/creataiv-horizontal-tight.webp" width="700" height="190" alt="CREATAIV">
+        <img class="brand-wordmark" src="assets/creataiv-horizontal-tight.webp" width="830" height="310" alt="CREATAIV">
       </a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="#idea">The idea</a>
