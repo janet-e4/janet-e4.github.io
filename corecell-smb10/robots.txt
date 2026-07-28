@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://janet-e4.github.io/corecell-smb10/sitemap.xml
