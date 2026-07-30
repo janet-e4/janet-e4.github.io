@@ -1119,7 +1119,7 @@ a {
 
 .site-footer {
   color: var(--cream);
-  background: #05090c;
+  background: var(--night);
 }
 
 .footer-frame {
@@ -1132,8 +1132,11 @@ a {
 }
 
 .footer-brand img {
-  width: 190px;
+  display: block;
+  width: min(100%, 270px);
   height: auto;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .footer-brand p {
@@ -1744,7 +1747,7 @@ a {
   }
 
   .footer-brand img {
-    width: 150px;
+    width: min(100%, 230px);
     height: auto;
   }
 
