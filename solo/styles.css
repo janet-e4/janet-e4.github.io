@@ -1,7 +1,7 @@
 /*
   Design contract — Exhale Ledger
   Warm paper, rested teal, clay marks, tactile ledger rules, one human subject,
-  asymmetrical relief, large readable type, and no generic SaaS card grid.
+  asymmetrical relief, large readable type, and a blue-black integrated brand bar.
 */
 
 @font-face {
@@ -48,6 +48,7 @@
   --oat: #ddd3c2;
   --cream: #fffaf0;
   --white: #fffdf8;
+  --night: #03070d;
   --rule: rgba(32, 40, 38, 0.2);
   --rule-light: rgba(255, 250, 240, 0.28);
   --display: "Noto Serif Solo", Georgia, "Times New Roman", serif;
@@ -156,9 +157,10 @@ a {
 .site-header {
   position: relative;
   z-index: 30;
-  border-bottom: 1px solid rgba(32, 40, 38, 0.12);
-  background: rgba(243, 239, 230, 0.94);
-  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(239, 173, 145, 0.3);
+  color: var(--cream);
+  background: var(--night);
+  box-shadow: 0 8px 24px rgba(3, 7, 13, 0.16);
 }
 
 .header-frame {
@@ -166,7 +168,7 @@ a {
   grid-template-columns: minmax(240px, 1fr) auto minmax(240px, 1fr);
   align-items: center;
   width: var(--page);
-  min-height: 82px;
+  min-height: 86px;
   margin-inline: auto;
   gap: 2rem;
 }
@@ -175,39 +177,38 @@ a {
   display: flex;
   align-items: center;
   justify-self: start;
-  gap: 0.9rem;
+  gap: 1rem;
   text-decoration: none;
 }
 
 .brand img {
-  width: 128px;
+  width: 142px;
   height: auto;
 }
 
 .product-signature {
   display: flex;
-  flex-direction: column;
-  padding-left: 0.9rem;
-  border-left: 1px solid var(--rule);
-  font-size: 0.68rem;
-  line-height: 1.25;
-  letter-spacing: 0.12em;
+  align-items: center;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 250, 240, 0.28);
+  color: var(--cream);
+  font-size: 0.88rem;
+  line-height: 1;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .product-signature strong {
-  color: var(--spruce);
-  font-size: 0.78rem;
-}
-
-.product-signature span {
-  color: var(--olive);
+  color: inherit;
+  font-size: inherit;
 }
 
 .desktop-nav {
   display: flex;
   justify-content: center;
   gap: clamp(1.2rem, 2.7vw, 2.7rem);
+  color: rgba(255, 250, 240, 0.78);
   font-size: 0.77rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -217,6 +218,12 @@ a {
 .desktop-nav a {
   position: relative;
   text-decoration: none;
+  transition: color 160ms var(--ease-out);
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible {
+  color: var(--white);
 }
 
 .desktop-nav a::after {
@@ -280,9 +287,17 @@ a {
   justify-self: end;
   min-height: 44px;
   padding: 0.72rem 1rem;
+  border: 1px solid rgba(255, 250, 240, 0.18);
+  background: var(--teal);
   font-size: 0.78rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  box-shadow: none;
+}
+
+.header-cta:hover {
+  background: #1f7f77;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
 }
 
 .header-cta-short {
@@ -1302,7 +1317,9 @@ a {
   }
 
   .product-signature {
-    display: none;
+    padding-left: 0.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.11em;
   }
 
   .hero {
@@ -1502,7 +1519,7 @@ a {
   }
 
   .site-header {
-    backdrop-filter: blur(14px);
+    box-shadow: 0 6px 18px rgba(3, 7, 13, 0.16);
   }
 
   .header-frame {
@@ -1511,7 +1528,17 @@ a {
   }
 
   .brand img {
-    width: 96px;
+    width: 88px;
+  }
+
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .product-signature {
+    padding-left: 0.55rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
   }
 
   .header-cta {
